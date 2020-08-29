@@ -1,0 +1,225 @@
+aside.promo1 {
+  max-width: 270px;
+  flex-basis: 270px;
+  background-color: tomato;
+  margin-right: 16px;
+  @media screen and (max-width: 880px) {
+    display: none;
+  }
+}
+.main-content {
+  flex-grow: 1;
+}
+.course-nav {
+  margin-bottom: 18px;
+  ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    @media screen and (max-width: 880px) {
+      flex-direction: column;
+    }
+  }
+}
+.course-nav-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.course-nav-item {
+  font-size: 18px;
+  color: #121211;
+  margin-right: 22px;
+  &:last-child {
+    margin-right: 0;
+  }
+  @media screen and (max-width: 880px) {
+    margin-right: 0;
+    margin-bottom: 12px;
+  }
+  label {
+    cursor: pointer;
+  }
+  span {
+    position: relative;
+    display: block;
+    padding-bottom: 5px;
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 1px;
+      background-color: #d6c6ed;
+      transition: background-color 0.2s ease-in;
+    }
+  }
+}
+.course-nav-input:checked + span {
+  &::before {
+    background-color: #60278c;
+  }
+}
+.row-curse-item {
+  display: none;
+  flex-wrap: wrap;
+}
+.row-curse-item--active {
+  display: flex;
+}
+.curse-item-col {
+  margin-right: 6px;
+  margin-bottom: 6px;
+  @media screen and (min-width: 1180px) {
+    flex-basis: calc(100% / 3 - 12px);
+    max-width: calc(100% / 3 - 12px);
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+  @media screen and (max-width: 1180px) {
+    flex-basis: calc(100% / 2 - 6px);
+    max-width: calc(100% / 2 - 6px);
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+  @media screen and (max-width: 880px) {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin-right: 0;
+    .curse-item-content {
+      opacity: 1;
+    }
+  }
+}
+.curse-item {
+  display: block;
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+  overflow: hidden;
+}
+.curse-item-img {
+  position: absolute;
+  display: block;
+  min-width: 100%;
+  min-height: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.curse-item-caption {
+  position: absolute;
+  font-size: 18px;
+  text-transform: uppercase;
+  padding: 0 16px 0 16px;
+  z-index: 2;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 6px;
+    height: 100%;
+    background-color: #d6c6ed;
+  }
+  @media screen and (max-width: 880px) {
+    display: none;
+  }
+}
+.curse-item-caption--left {
+  left: 0;
+  top: 16px;
+  &::before {
+    left: 0;
+  }
+}
+.curse-item-caption--right {
+  right: 0;
+  bottom: 16px;
+  &::before {
+    right: 0;
+  }
+}
+.curse-item-caption--white {
+  color: #fff;
+}
+.curse-item-caption--accent {
+  color: #58267e;
+}
+.curse-item-content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba($color: #58267e, $alpha: 0.8);
+  margin: 12px;
+  z-index: 3;
+  padding: 10px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+.curse-item-content-title {
+  padding: 0;
+  margin: 0 0 8px 0;
+  text-transform: uppercase;
+  font-size: 18px;
+  color: #fff;
+}
+.curse-item-content-type {
+  position: relative;
+  padding: 0 0 4px 0;
+  margin: 0 0 4px 0;
+  color: #fff;
+  font-size: 14px;
+  line-height: 24px;
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+  }
+}
+.curse-item-content-text {
+  padding: 0;
+  font-size: 14px;
+  line-height: 24px;
+  color: #fff;
+  margin: 0 0 8px 0;
+}
+.curse-item-btn {
+  display: inline-block;
+  padding: 6px 20px 10px 20px;
+  font-size: 16px;
+  color: #60278c;
+  background-color: #ffffff;
+  transition: background-color 0.2s ease-out;
+  &:hover {
+    background-color: rgba($color: #fff, $alpha: 0.8);
+  }
+}
+.curse-item:hover {
+  .curse-item-content {
+    opacity: 1;
+  }
+}
