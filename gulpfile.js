@@ -44,7 +44,11 @@ function styles() {
 function scripts() {
   return src([
     'node_modules/jquery/dist/jquery.min.js', // npm vendor example (npm i --save-dev jquery)
-    'node_modules/swiper/swiper-bundle.js',
+    // 'node_modules/swiper/swiper-bundle.js',
+    'node_modules/inputmask/dist/inputmask.js',
+    'node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.js',
+    'node_modules/jquery-timepicker/jquery.timepicker.js',
+    'node_modules/bootstrap-datepicker/dist/locales/bootstrap-datepicker.ru.min.js',
     'app/js/app.js', // app.js. Always at the end
   ])
     .pipe(concat('app.min.js'))

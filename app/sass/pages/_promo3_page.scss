@@ -1,0 +1,364 @@
+// FONTS
+$circe: Circe, sans-serif;
+$mainfamily: $circe;
+// COLOR
+$accent: #b598e4;
+$accent-sub: #582c83;
+$black: #000;
+$gray: #2b2b2b;
+$gray-light: #f0f2f4;
+$white: #fff;
+
+// BP
+$mobile-bp: 1000px;
+
+body {
+  margin: 0;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.sidebar--referral {
+  min-width: 200px;
+  @media screen and (max-width: $mobile-bp) {
+    display: none;
+  }
+}
+.referral-form-col {
+  flex-grow: 1;
+  background-repeat: no-repeat;
+  background-position: top 30px right;
+  background-image: url('../images/dest/bubble-form.png');
+  @media screen and (max-width: $mobile-bp) {
+    background-size: 300px auto;
+  }
+}
+.container--referral {
+  max-width: 1170px;
+  margin: 0 auto;
+  font-family: $mainfamily;
+  padding: 0 60px;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  @media screen and (max-width: $mobile-bp) {
+    padding: 0 20px;
+  }
+}
+.referral-form {
+  display: block;
+  padding: 30px 0 0 50px;
+  max-width: 380px;
+  @media screen and (max-width: $mobile-bp) {
+    padding: 30px 0 0 0;
+    margin: 0 auto;
+  }
+}
+.referral-title {
+  margin: 0 0 18px 0;
+  font-size: 17px;
+  line-height: 24px;
+  color: #111111;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+.referral-description {
+  font-size: 14px;
+  line-height: 1;
+  color: #2c2c2c;
+  font-weight: 300;
+  margin: 0 0 18px 0;
+}
+.referral-input-wrapper {
+  display: block;
+  margin-bottom: 10px;
+  position: relative;
+}
+.referral-input,
+.referral-input-select {
+  font-family: $mainfamily;
+  box-sizing: border-box;
+  padding: 12px 8px;
+  border: solid 1px #bfbfbf;
+  border-radius: 0;
+  font-size: 14px;
+  line-height: 24px;
+  color: #333;
+  font-weight: 300;
+  transition: border-color 0.2s ease-in;
+  width: 100%;
+  &::placeholder {
+    font-size: inherit;
+    line-height: inherit;
+    color: #a3a3a3;
+    font-weight: inherit;
+  }
+  &:focus {
+    outline: none;
+    border-color: #58267e;
+  }
+  &.no-valid {
+    border-color: #b598e4;
+    & + .referral-error-msg {
+      display: block;
+    }
+  }
+}
+.referral-error-msg {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  font-size: 14px;
+  line-height: 20px;
+  color: #b598e4;
+  font-weight: 300;
+}
+.referral-input-text {
+  @extend .visually-hidden;
+}
+.referral-input-wrapper--select {
+  position: relative;
+}
+.referral-select-inner {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 32px;
+    height: 100%;
+    background-color: #592c82;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 12px auto;
+    background-image: url("data:image/svg+xml,%3Csvg enable-background='new 0 0 451.847 451.847' height='451.847' viewBox='0 0 451.847 451.847' width='451.847' xmlns='http://www.w3.org/2000/svg' fill='%23fff'%3E%3Cpath d='m225.923 354.706c-8.098 0-16.195-3.092-22.369-9.263l-194.284-194.286c-12.359-12.359-12.359-32.397 0-44.751 12.354-12.354 32.388-12.354 44.748 0l171.905 171.915 171.906-171.909c12.359-12.354 32.391-12.354 44.744 0 12.365 12.354 12.365 32.392 0 44.751l-194.281 194.286c-6.177 6.172-14.274 9.257-22.369 9.257z'/%3E%3C/svg%3E");
+  }
+}
+.referral-input--select {
+  cursor: pointer;
+  padding: 12px 40px 12px 8px;
+  &:focus {
+    & + .referral-select-dropdown {
+      opacity: 1;
+      visibility: visible;
+      transition: opacity 0.2s ease-in, visibility 0.2s ease-in;
+    }
+  }
+}
+.referral-select-dropdown {
+  position: absolute;
+  left: 0;
+  top: calc(100% - 1px);
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border: solid 1px #58267e;
+  background-color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease-in, visibility 0.2s 0.2s ease-in;
+  z-index: 3;
+  li {
+    box-sizing: border-box;
+    width: 100%;
+  }
+  label {
+    display: block;
+  }
+}
+.referral-select-dropdown-item {
+  @extend .visually-hidden;
+}
+.referral-select-dropdown-text {
+  display: block;
+  padding: 12px 8px;
+  font-size: 14px;
+  line-height: 24px;
+  color: #a3a3a3;
+  font-weight: 300;
+  transition: color 0.2s ease-in, background-color 0.2s ease-in;
+  cursor: pointer;
+  &:hover {
+    color: #333;
+    background-color: rgba($color: #592c82, $alpha: 0.4);
+  }
+}
+.referral-checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+.referral-checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  line-height: 1;
+  margin-bottom: 14px;
+}
+.referral-checkbox-wrapper--col2 {
+  flex-basis: 50%;
+  max-width: 50%;
+}
+.referral-checkbox-input {
+  @extend .visually-hidden;
+  &:focus {
+    & + .referral-checkbox {
+      border-color: #58267e;
+    }
+  }
+  &:checked {
+    & + .referral-checkbox {
+      border-color: #58267e;
+      background-image: url("data:image/svg+xml,%3Csvg enable-background='new 0 0 512 512' viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg' fill='%23592c82'%3E%3Cpath d='m504.502 75.496c-9.997-9.998-26.205-9.998-36.204 0l-306.704 306.707-117.892-117.892c-9.997-9.998-26.205-9.997-36.204 0-9.998 9.997-9.998 26.205 0 36.203l135.994 135.992c9.994 9.997 26.214 9.99 36.204 0l324.806-324.806c9.998-9.997 9.997-26.206 0-36.204z'/%3E%3C/svg%3E");
+    }
+  }
+}
+.referral-checkbox {
+  display: block;
+  box-sizing: border-box;
+  width: 16px;
+  height: 16px;
+  border: solid 1px #bfbfbf;
+  margin-right: 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 10px auto;
+  cursor: pointer;
+}
+.referral-checkbox-text {
+  font-size: 14px;
+  line-height: 16px;
+  color: #2c2c2c;
+  font-weight: 300;
+}
+.referral-input-wrapper-container {
+  display: flex;
+}
+.referral-input-wrapper--date {
+  flex-grow: 1;
+  margin-right: 6px;
+}
+.referral-input-wrapper--time {
+  flex: 0 0 auto;
+}
+.referral-input--date {
+  background-repeat: no-repeat;
+  background-position: center right 6px;
+  background-image: url('../images/dest/calendar.png');
+  padding-right: 44px;
+}
+.referral-input--time {
+  width: 130px;
+  background-repeat: no-repeat;
+  background-position: center right 16px;
+  background-image: url('../images/dest/clock.png');
+  padding-right: 54px;
+}
+.ui-timepicker-standard {
+  font-family: $mainfamily;
+}
+.ui-timepicker-standard {
+  a {
+    font-weight: 300;
+    cursor: pointer;
+  }
+  a.ui-state-hover {
+    background-color: rgba($color: #592c82, $alpha: 0.4);
+    border-color: transparent;
+  }
+}
+
+.datepicker {
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  font-family: $mainfamily;
+}
+.datepicker table tr td.active.active {
+  background-color: #58267e;
+  background-image: none;
+}
+.datepicker table tr td.active.active:hover {
+  background-color: #58267e;
+  background-image: none;
+}
+.datepicker td {
+  font-weight: 300;
+}
+.referral-checkbox-wrapper--privacy {
+  margin-top: 25px;
+}
+.btn-referral {
+  border: 0;
+  background-color: transparent;
+  font-family: $mainfamily;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  white-space: nowrap;
+  text-align: center;
+  padding: 0;
+  &:focus {
+    outline: none;
+  }
+}
+.btn-referral-main {
+  display: inline-block;
+  padding: 16px 10px 14px 10px;
+  background-color: #58267e;
+  font-size: 18px;
+  color: $white;
+  text-decoration: none;
+  text-transform: uppercase;
+  line-height: 1;
+  &:hover {
+    background-color: #dc2c7b;
+  }
+  @media screen and (max-width: $mobile-bp) {
+    font-size: 14px;
+  }
+}
+.btn-referral--form {
+  width: 184px;
+  margin-top: 25px;
+  display: block;
+}
+.referral-maney-text {
+  font-size: 16px;
+  line-height: 33px;
+  color: #111;
+  text-transform: uppercase;
+  margin: 0 0 30px 0;
+}
+.referral-form-col--deposit {
+  background-position: top 90px right;
+  padding: 35px 0 0 50px;
+  min-height: 560px;
+  height: 100%;
+  @media screen and (max-width: $mobile-bp) {
+    padding: 35px 0 0 0;
+    background-size: 250px;
+  }
+}
+
+.referral-title--deposit {
+  margin-bottom: 28px;
+}
+.btn-referral-main--deposit {
+  margin-top: 34px;
+  padding: 16px 18px 14px 18px;
+}

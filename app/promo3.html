@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>Aravia</title>
+    <meta name="description" content="Amourrr" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- <link rel="icon" href="img/favicon.png" /> -->
+    <meta property="og:image" content="img/dest/preview.jpg" />
+    <link rel="stylesheet" href="css/app.min.css" />
+  </head>
+  <body>
+    <div class="container--referral">
+      <div class="row row--referral">
+        <div class="sidebar--referral">
+          <p>Sidebar</p>
+        </div>
+        <div class="referral-form-col">
+          <form class="referral-form">
+            <h1 class="referral-title">Мои консультации</h1>
+            <p class="referral-description">
+              Для оформления заявки на консультацию заполните форму ниже:
+            </p>
+            <div class="referral-input-wrapper">
+              <label>
+                <span class="referral-input-text">Введите имя</span>
+                <input
+                  type="text"
+                  class="referral-input"
+                  name="name"
+                  placeholder="Имя*"
+                  required
+                />
+              </label>
+            </div>
+            <div class="referral-input-wrapper">
+              <label>
+                <span class="referral-input-text">Введите фамилию</span>
+                <input
+                  type="text"
+                  class="referral-input"
+                  name="surname"
+                  placeholder="Фамилия*"
+                  required
+                />
+              </label>
+            </div>
+            <div class="referral-input-wrapper referral-input-wrapper--select">
+              <label class="referral-select-inner">
+                <span class="referral-input-text">Выберите специализацию</span>
+                <input
+                  type="text"
+                  class="referral-input referral-input--select"
+                  placeholder="Косметолог-новичок"
+                  readonly
+                  id="specialization"
+                />
+                <ul class="referral-select-dropdown">
+                  <li>
+                    <label
+                      ><input
+                        type="radio"
+                        value="Косметолог-новичок"
+                        name="specialization"
+                        checked
+                        class="referral-select-dropdown-item"
+                        onclick="onSetValueSelect(this)"
+                      />
+                      <span class="referral-select-dropdown-text"
+                        >Косметолог-новичок</span
+                      ></label
+                    >
+                  </li>
+                  <li>
+                    <label
+                      ><input
+                        type="radio"
+                        value="Значение 1"
+                        name="specialization"
+                        class="referral-select-dropdown-item"
+                        onclick="onSetValueSelect(this)"
+                      />
+                      <span class="referral-select-dropdown-text"
+                        >Значение 1</span
+                      ></label
+                    >
+                  </li>
+                  <li>
+                    <label
+                      ><input
+                        type="radio"
+                        value="Значение 2"
+                        name="specialization"
+                        class="referral-select-dropdown-item"
+                        onclick="onSetValueSelect(this)"
+                      />
+                      <span class="referral-select-dropdown-text"
+                        >Значение 2</span
+                      ></label
+                    >
+                  </li>
+                  <li>
+                    <label
+                      ><input
+                        type="radio"
+                        value="Значение 3"
+                        name="specialization"
+                        class="referral-select-dropdown-item"
+                        onclick="onSetValueSelect(this)"
+                      />
+                      <span class="referral-select-dropdown-text"
+                        >Значение 3</span
+                      ></label
+                    >
+                  </li>
+                </ul>
+              </label>
+            </div>
+            <div class="referral-checkbox-group">
+              <label
+                class="referral-checkbox-wrapper referral-checkbox-wrapper--col2"
+              >
+                <input
+                  type="checkbox"
+                  name="procedures"
+                  class="referral-checkbox-input"
+                />
+                <span class="referral-checkbox"></span>
+                <span class="referral-checkbox-text">Косметология</span>
+              </label>
+              <label
+                class="referral-checkbox-wrapper referral-checkbox-wrapper--col2"
+              >
+                <input
+                  type="checkbox"
+                  name="procedures"
+                  class="referral-checkbox-input"
+                />
+                <span class="referral-checkbox"></span>
+                <span class="referral-checkbox-text">SPA-уход</span>
+              </label>
+              <label
+                class="referral-checkbox-wrapper referral-checkbox-wrapper--col2"
+              >
+                <input
+                  type="checkbox"
+                  name="procedures"
+                  class="referral-checkbox-input"
+                />
+                <span class="referral-checkbox"></span>
+                <span class="referral-checkbox-text">Депиляция</span>
+              </label>
+              <label
+                class="referral-checkbox-wrapper referral-checkbox-wrapper--col2"
+              >
+                <input
+                  type="checkbox"
+                  name="procedures"
+                  class="referral-checkbox-input"
+                />
+                <span class="referral-checkbox"></span>
+                <span class="referral-checkbox-text">Коррекция фигуры</span>
+              </label>
+            </div>
+            <div class="referral-input-wrapper">
+              <label>
+                <input
+                  type="text"
+                  class="referral-input"
+                  name="city"
+                  placeholder="Город*"
+                  required
+                />
+              </label>
+            </div>
+            <p class="referral-description">Желаемая дата и время:</p>
+            <div class="referral-input-wrapper-container">
+              <div class="referral-input-wrapper referral-input-wrapper--date">
+                <label id="datapicker">
+                  <span class="referral-input-text">Выберите дату</span>
+                  <input
+                    type="text"
+                    class="referral-input referral-input--date"
+                    name="phone"
+                    id="date"
+                    placeholder="ДД.ММ.ГГГГ"
+                  />
+                </label>
+              </div>
+              <div class="referral-input-wrapper referral-input-wrapper--time">
+                <label>
+                  <span class="referral-input-text">Выберите время</span>
+                  <input
+                    type="text"
+                    class="referral-input referral-input--time"
+                    name="time"
+                    id="time"
+                    placeholder="00:00"
+                  />
+                </label>
+              </div>
+            </div>
+            <div class="referral-input-wrapper">
+              <label>
+                <span class="referral-input-text">Введите номер телефона</span>
+                <input
+                  type="text"
+                  class="referral-input"
+                  name="phone"
+                  placeholder="Телефон*"
+                  id="phone"
+                  required
+                />
+              </label>
+            </div>
+            <div class="referral-input-wrapper">
+              <label>
+                <span class="referral-input-text"
+                  >Введите электронный адрес</span
+                >
+                <input
+                  type="email"
+                  class="referral-input"
+                  name="email"
+                  placeholder="E-mail*"
+                  required
+                  onfocus="onClearValidState(this)"
+                  onblur="onValidateEmail(this)"
+                />
+                <span class="referral-error-msg">Неверный E-mail</span>
+              </label>
+            </div>
+            <label
+              class="referral-checkbox-wrapper referral-checkbox-wrapper--privacy"
+            >
+              <input
+                type="checkbox"
+                name="privacy"
+                class="referral-checkbox-input"
+                required
+              />
+              <span class="referral-checkbox"></span>
+              <span class="referral-checkbox-text"
+                >Соглашаюсь с пользовательским согласшением.</span
+              >
+            </label>
+            <button
+              type="submit"
+              class="btn-referral btn-referral-main btn-referral--form"
+            >
+              Оплатить
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="js/app.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        Inputmask({ mask: '+7(999)999-99-99' }).mask(
+          document.getElementById('phone')
+        );
+        Inputmask({ mask: '99.99.9999' }).mask(document.getElementById('date'));
+        $('#datapicker input').datepicker({
+          format: 'dd.mm.yyyy',
+          language: 'ru',
+        });
+        $('#time').timepicker({
+          timeFormat: 'H:mm',
+          interval: 30,
+          minTime: '0',
+          startTime: '09:00',
+          dynamic: false,
+          dropdown: true,
+          scrollbar: true,
+          zindex: 1000,
+        });
+      });
+
+      function onClearValidState(el) {
+        el.classList.remove('no-valid');
+      }
+
+      function onValidateEmail(el) {
+        if (!isValidEmail(el.value)) {
+          el.classList.add('no-valid');
+        }
+      }
+
+      function isValidEmail(value) {
+        var reg = /^[^\@]+@.*\.[a-z]{2,6}$/i;
+        return reg.test(value);
+      }
+      function onSetValueSelect(el) {
+        var selectedValue = el.value;
+        var input = document.querySelector('#specialization');
+        input.value = selectedValue;
+      }
+    </script>
+  </body>
+</html>

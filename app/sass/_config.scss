@@ -1,4 +1,6 @@
 @import 'node_modules/swiper/swiper.scss';
+@import 'node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker';
+@import 'node_modules/jquery-timepicker/jquery.timepicker';
 
 // FONTS LOAD SECTION
 @mixin font($f-name, $f-style, $f-weight, $f-url) {
