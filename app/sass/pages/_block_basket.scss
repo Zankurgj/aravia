@@ -1,0 +1,78 @@
+// FONTS
+$circe: Circe, sans-serif;
+$mainfamily: $circe;
+
+.block-card-aravia {
+  position: relative;
+  padding: 24px 24px 24px 144px;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: #f7f3fc;
+  @media screen and (max-width: $mobile-bp) {
+    padding: 34px 34px 34px 184px;
+  }
+}
+
+.block-card-aravia-text {
+  font-family: $mainfamily;
+  font-size: 18px;
+  color: #000;
+  font-weight: bold;
+  @media screen and (max-width: $mobile-bp) {
+    font-size: 28px;
+  }
+}
+.block-card-aravia-img {
+  display: block;
+  position: absolute;
+  bottom: 8px;
+  left: 20px;
+  width: 108px;
+  height: auto;
+  @media screen and (max-width: $mobile-bp) {
+    width: 148px;
+  }
+}
+.block-card-aravia-input-wrapper {
+  display: flex;
+  align-items: center;
+}
+.block-card-aravia-checkbox {
+  position: relative;
+  display: block;
+  width: 24px;
+  height: 24px;
+  border: 1px solid #592c82;
+  background-color: #fff;
+  margin-right: 24px;
+  cursor: pointer;
+  &::before {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 2px;
+    width: 8px;
+    height: 14px;
+    transform: rotate(45deg);
+    border-right: 2px solid #592c82;
+    border-bottom: 2px solid #592c82;
+    opacity: 0;
+  }
+}
+.block-card-aravia-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  &:checked {
+    & + .block-card-aravia-checkbox::before {
+      opacity: 1;
+    }
+  }
+}
