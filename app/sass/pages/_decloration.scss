@@ -1,0 +1,208 @@
+// FONTS
+$circe: Circe, sans-serif;
+$mainfamily: $circe;
+// BP
+$mobile-bp: 1000px;
+.declaration-page {
+  padding: 20px 0 30px 0;
+  @media screen and (max-width: $mobile-bp) {
+    padding: 40px 0 50px 0;
+  }
+}
+.container--declaration {
+  min-width: 768px;
+  font-family: $mainfamily;
+  max-width: 1090px;
+  width: 100%;
+  margin: 0 auto;
+  // -webkit-font-smoothing: antialiased;
+  position: relative;
+  padding: 0 60px;
+  box-sizing: border-box;
+  @media screen and (max-width: $mobile-bp) {
+    padding: 0 20px;
+  }
+}
+.declaration-page-title {
+  padding: 32px 0;
+  background-color: #ece2ff;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0 0 20px 0;
+  @media screen and (max-width: $mobile-bp) {
+    font-size: 26px;
+    margin: 0 0 40px 0;
+  }
+}
+.declaration-search-block {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  @media screen and (max-width: $mobile-bp) {
+    margin-bottom: 50px;
+  }
+}
+.declaration-search-wrapper {
+  max-width: 364px;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  margin-right: 12px;
+  @media screen and (max-width: $mobile-bp) {
+    max-width: none;
+  }
+}
+.declaration-search-icon {
+  display: block;
+  flex: 0 0 auto;
+  width: 26px;
+  height: auto;
+  margin-right: 12px;
+  @media screen and (max-width: $mobile-bp) {
+    width: 36px;
+  }
+}
+.declaration-search-input {
+  display: block;
+  flex-grow: 1;
+  padding: 8px 0;
+  border: none;
+  border-bottom: 1px solid #a0a0a0;
+  background-color: transparent;
+  color: #585757;
+  font-size: 14px;
+  font-weight: 300;
+  appearance: none;
+  transition: all 0.2s ease-in;
+  &::placeholder {
+    color: #a0a0a0;
+  }
+  &:focus {
+    outline: none;
+    border-color: #585757;
+  }
+  &::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+  }
+  &::-webkit-search-results-button {
+    -webkit-appearance: none;
+  }
+  @media screen and (max-width: $mobile-bp) {
+    font-size: 24px;
+  }
+}
+
+.btn-dec {
+  border: 0;
+  font-family: $mainfamily;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  white-space: nowrap;
+  text-align: center;
+  padding: 0;
+  display: inline-block;
+  padding: 16px 10px 14px 10px;
+  background-color: #582c83;
+  font-size: 14px;
+  font-weight: 300;
+  color: #fff;
+  text-decoration: none;
+  line-height: 1;
+  &:hover {
+    background-color: #dc2c7b;
+  }
+  &:focus {
+    outline: none;
+  }
+  @media screen and (max-width: $mobile-bp) {
+    font-size: 24px;
+  }
+}
+.btn-dec--search {
+  width: 144px;
+}
+
+.declaration-row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.declaration-item-col {
+  box-sizing: border-box;
+  flex-basis: calc((100% - 40px * 2) / 3);
+  max-width: calc((100% - 40px * 2) / 3);
+  margin-right: 40px;
+  margin-bottom: 30px;
+  &:nth-of-type(3n) {
+    margin-right: 0;
+  }
+  @media screen and (max-width: $mobile-bp) {
+    flex-basis: calc((100% - 50px) / 2);
+    max-width: calc((100% - 50px) / 2);
+    margin-bottom: 50px;
+    &:nth-of-type(3n) {
+      margin-right: 50px;
+    }
+    &:nth-of-type(2n) {
+      margin-right: 0;
+    }
+  }
+}
+.declaration-item {
+  display: block;
+  text-decoration: none;
+  color: #000;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.declaration-item-text {
+  padding: 20px 10px 0 10px;
+  font-size: 14px;
+  font-weight: 300;
+  color: #000;
+  text-align: center;
+  @media screen and (max-width: $mobile-bp) {
+    font-size: 24px;
+  }
+}
+.declaration-item-img {
+  img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+.btn-dec--more {
+  display: block;
+  max-width: 216px;
+  margin: 0 auto 20px auto;
+  width: 100%;
+  @media screen and (max-width: $mobile-bp) {
+    margin: 0 auto 40px auto;
+  }
+}
+.declaration-qa-block {
+  background-color: #f6f6f6;
+  padding: 22px;
+  font-size: 18px;
+  color: #000;
+  text-align: center;
+  strong {
+    font-weight: normal;
+    color: #5d328c;
+  }
+  a {
+    color: #5d328c;
+    white-space: nowrap;
+    &:hover {
+      color: #dc2c7b;
+    }
+  }
+  @media screen and (max-width: $mobile-bp) {
+    font-size: 28px;
+  }
+}
