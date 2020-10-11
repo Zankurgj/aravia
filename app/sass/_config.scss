@@ -1,5 +1,5 @@
 // @import 'node_modules/swiper/swiper.scss';
-@import 'node_modules/slick-carousel/slick/slick.scss';
+// @import 'node_modules/slick-carousel/slick/slick.scss';
 
 // FONTS LOAD SECTION
 @mixin font($f-name, $f-style, $f-weight, $f-url) {
@@ -16,3 +16,8 @@
 @include font('Circe', bold, 700, '../fonts/Circe-Bold');
 @include font('Circe', black, 900, '../fonts/Circe-ExtraBold');
 @include font('ruble', normal, 400, '../fonts/rubl');
+
+$circe: Circe, sans-serif;
+$mainfamily: $circe;
+$base-duration: 0.2s;
+$base-timing: ease-in;
