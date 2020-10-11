@@ -44,7 +44,8 @@ function styles() {
 function scripts() {
   return src([
     'node_modules/jquery/dist/jquery.min.js', // npm vendor example (npm i --save-dev jquery)
-    'node_modules/swiper/swiper-bundle.js',
+    'node_modules/slick-carousel/slick/slick.min.js',
+    // 'node_modules/swiper/swiper-bundle.js',
     'app/js/app.js', // app.js. Always at the end
   ])
     .pipe(concat('app.min.js'))
