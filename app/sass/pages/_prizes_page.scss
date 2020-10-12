@@ -14,8 +14,9 @@ body {
   font-family: $mainfamily;
   color: $base-text;
   font-weight: normal;
-  line-height: 1.4;
+  line-height: 1.3;
   min-width: 768px;
+  -webkit-font-smoothing: antialiased;
   * {
     margin: 0;
     box-sizing: border-box;
@@ -25,6 +26,7 @@ body {
     font-weight: normal;
     text-align: center;
     margin-bottom: 26px;
+    text-transform: uppercase;
     strong {
       display: block;
       color: $accent;
@@ -69,6 +71,7 @@ body {
     color: $accent;
     font-size: 36px;
     text-align: center;
+    text-transform: uppercase;
   }
   .title-underline {
     position: relative;
@@ -101,12 +104,18 @@ body {
     b {
       font-weight: 900;
       color: $purple;
+      text-transform: uppercase;
     }
     strong {
       font-size: 36px;
       font-weight: 900;
       color: $purple;
+      text-transform: uppercase;
     }
+  }
+  .prizes-h1--block1 {
+    padding-top: 80px;
+    margin-top: -80px;
   }
   .block1-col {
     max-width: 50%;
@@ -192,6 +201,8 @@ body {
     }
   }
   .prizes-h3--prizes-block2 {
+    padding-top: 80px;
+    margin-top: -80px;
     margin-bottom: 25px;
   }
   .prizes-block3 {
@@ -201,7 +212,13 @@ body {
       padding: 50px 30px 30px 30px;
     }
   }
+  .prizes-h1--block4 {
+    padding-top: 80px;
+    margin-top: -80px;
+  }
   .prizes-h2--prizes-block3 {
+    padding-top: 80px;
+    margin-top: -80px;
     margin-bottom: 85px;
     @media screen and (max-width: 1000px) {
       margin-bottom: 20px;
@@ -274,9 +291,69 @@ body {
     }
   }
   .block3-item {
+    position: relative;
     display: flex;
     flex-direction: column;
     height: 100%;
+    overflow: hidden;
+    &:hover {
+      .block3-item-info-inner {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0px);
+      }
+    }
+  }
+  .block3-item-info {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    height: 100%;
+    padding: 20px 18px;
+    z-index: 2;
+  }
+  .block3-item-info-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba($color: $purple, $alpha: 0.53);
+    padding: 30px 10px 15px 10px;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all $base-duration $base-timing;
+  }
+  .block3-item-info-text-inner {
+    max-width: 420px;
+  }
+  .block3-item-info-title {
+    font-size: 24px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 15px;
+    @media screen and (max-width: 1622px) {
+      font-size: 22px;
+    }
+    @media screen and (max-width: 1350px) {
+      font-size: 24px;
+    }
+  }
+  .block3-item-info-text {
+    font-size: 24px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 15px;
+    line-height: 1.2;
+    @media screen and (max-width: 1622px) {
+      font-size: 20px;
+    }
+    @media screen and (max-width: 1350px) {
+      font-size: 24px;
+    }
   }
   .block3-item-img {
     position: relative;
@@ -294,7 +371,6 @@ body {
     font-size: 24px;
     text-align: center;
     font-weight: bold;
-    margin-bottom: 8px;
     @media screen and (max-width: 1000px) {
       font-size: 34px;
     }
@@ -359,5 +435,80 @@ body {
       transform: translate(0, 0);
       box-shadow: none;
     }
+  }
+  .block3-item-info-btn {
+    background-color: #ef299e;
+    color: #fff;
+    display: block;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+    max-width: 362px;
+    width: 100%;
+    transition: all $base-duration $base-timing;
+    @media screen and (max-width: 1622px) {
+      font-size: 20px;
+    }
+    &:hover {
+      background-color: $purple;
+    }
+  }
+  .prizes-header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    border-bottom: 8px solid #ef299e;
+    background-color: #fff;
+    z-index: 10;
+    padding: 0 30px;
+    transform: translate3d(0, 0, 0);
+    ul {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      @media screen and (max-width: 1000px) {
+        justify-content: space-between;
+      }
+      li {
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+    .prizes-header-item {
+      display: block;
+      font-size: 18px;
+      color: #4b4b4b;
+      text-transform: uppercase;
+      text-decoration: none;
+      line-height: 1;
+      padding: 20px 0 12px;
+      margin-right: 20px;
+      margin-right: 60px;
+      transition: color $base-duration $base-timing;
+      white-space: nowrap;
+      @media screen and (max-width: 1000px) {
+        margin-right: 30px;
+      }
+      &:hover,
+      &:focus {
+        color: $purple;
+        outline: none;
+      }
+    }
+  }
+  .fake-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $purple;
+    font-size: 30px;
+    color: #fff;
+    height: 100px;
   }
 }
