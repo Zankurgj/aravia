@@ -708,8 +708,8 @@
     font-size: 30px;
   }
   .land-line__text {
-    font-size: 32px;
-    line-height: 1.6;
+    font-size: 28px;
+    line-height: 1.3;
     span {
       display: block;
     }
@@ -823,6 +823,7 @@
   }
   .land-line {
     padding: 20px 40px 70px 40px;
+    padding: 38px 0 68px 0;
   }
   .land-part {
     padding-top: 28px;
@@ -957,6 +958,13 @@
   }
   .land-compound__item_2 .land-icons__label {
     background: #e9eaf7;
+  }
+  .land-links__icon {
+    height: 75px;
+    margin-bottom: 20px;
+    img {
+      height: 100%;
+    }
   }
 }
 /* /768 */
