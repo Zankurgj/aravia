@@ -24,6 +24,8 @@
     "jquery": "^3.5.0"
   },
   "dependencies": {
+    "imagesloaded": "^4.1.4",
+    "masonry-layout": "^4.2.2",
     "slick-carousel": "^1.8.1",
     "swiper": "^6.1.2"
   }
