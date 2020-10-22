@@ -803,6 +803,7 @@
   }
   .land-links__list {
     padding-top: 30px;
+    justify-content: center;
   }
   .land-compound__item_2 .land-compound-group__image {
     margin: 0;
@@ -960,10 +961,16 @@
     background: #e9eaf7;
   }
   .land-links__icon {
-    height: 75px;
+    height: 95px;
     margin-bottom: 20px;
     img {
       height: 100%;
+    }
+  }
+  .land-links__item {
+    margin-right: 130px;
+    &:last-child {
+      margin-right: 0;
     }
   }
 }
