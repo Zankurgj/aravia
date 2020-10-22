@@ -270,6 +270,9 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    @media screen and (max-width: $mobile-bp) {
+      height: 100%;
+    }
   }
   .blogs-item-img-author {
     display: block;
@@ -306,6 +309,10 @@ body {
       background-repeat: no-repeat;
       background-size: contain;
       background-position: center;
+      @media screen and (max-width: $mobile-bp) {
+        width: 30px;
+        height: 15px;
+      }
     }
     &::before {
       right: 100%;
