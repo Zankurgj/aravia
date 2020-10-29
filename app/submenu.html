@@ -111,7 +111,16 @@
       event.stopPropagation();
       if ($(window).width() <= 768) {
         $(this).toggleClass('submenu-item--open');
-      $(this).children('.submenu-inner-menu').slideToggle(200);
+        $(this).children('.submenu-inner-menu').slideToggle(200);
+      }
+    });
+    $( "a.submenu-item-text").click(function(event) {
+      event.stopPropagation();
+      if ($(window).width() <= 768) {
+        const href = $(this).attr('href');
+        if (href) {
+          window.location.href = href;
+        }
       }
     });
   </script>
