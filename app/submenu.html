@@ -16,36 +16,36 @@
             <aside>
               <nav class="submenu-wrapper">
                 <div class="submenu-item submenu-item--menu submenu-item--active">
-                  <a href="#">SPA-Шугаринг</a>
+                  <a href="#" class="submenu-item-text">SPA-Шугаринг</a>
                   <ul class="submenu-inner-menu">
                     <li class="submenu-item">
-                      <span>SPA-Шугаринг</span>
+                      <a href="#" class="submenu-item-text">SPA-Шугаринг</a>
                     </li>
                     <li class="submenu-item">
-                      <span>SPA-Шугаринг</span>
+                      <a href="#" class="submenu-item-text">SPA-Шугаринг</a>
                     </li>
                     <li class="submenu-item submenu-item--menu">
-                      <span>SPA-Шугаринг</span>
+                      <a href="#" class="submenu-item-text">SPA-Шугаринг</a>
                       <ul class="submenu-inner-menu">
                         <li class="submenu-item submenu-item--menu">
-                          <span>SPA-Шугаринг</span>
+                          <a href="#" class="submenu-item-text">SPA-Шугаринг</a>
                           <ul class="submenu-inner-menu">
                             <li class="submenu-item">
-                              <span>SPA-Шугаринг</span>
+                              <a href="#" class="submenu-item-text">SPA-Шугаринг</a>
                             </li>
                             <li class="submenu-item">
-                              <span>SPA-Шугаринг</span>
+                              <a href="#" class="submenu-item-text">SPA-Шугаринг</a>
                             </li>
                             <li class="submenu-item">
-                              <span>SPA-Шугаринг</span>
+                              <a href="#" class="submenu-item-text">SPA-Шугаринг</a>
                             </li>
                           </ul>
                         </li>
                         <li class="submenu-item">
-                          <span>SPA-Шугаринг</span>
+                          <a href="#" class="submenu-item-text">SPA-Шугаринг</a>
                         </li>
                         <li class="submenu-item">
-                          <span>SPA-Шугаринг</span>
+                          <a href="#" class="submenu-item-text">SPA-Шугаринг</a>
                         </li>
                       </ul>
                     </li>
@@ -53,42 +53,42 @@
                 </div>
 
                 <div class="submenu-item submenu-item--menu">
-                  <a href="#">SPA-Шугаринг</a>
+                  <a href="#" class="submenu-item-text">SPA-Шугаринг</a>
                   <ul class="submenu-inner-menu">
                     <li class="submenu-item">
-                      <span>SPA-Шугаринг</span>
+                      <a href="#" class="submenu-item-text">SPA-Шугаринг</a>
                     </li>
                     <li class="submenu-item">
-                      <span>SPA-Шугаринг</span>
+                      <a href="#" class="submenu-item-text">SPA-Шугаринг</a>
                     </li>
                     <li class="submenu-item">
-                      <span>SPA-Шугаринг</span>
+                      <a href="#" class="submenu-item-text">SPA-Шугаринг</a>
                     </li>
                   </ul>
                 </div>
 
                 <div class="submenu-item submenu-item--menu">
-                  <a href="#">SPA-Шугаринг</a>
+                  <a href="#" class="submenu-item-text">SPA-Шугаринг</a>
                   <ul class="submenu-inner-menu">
                     <li class="submenu-item">
-                      <span>SPA-Шугаринг</span>
+                      <a href="#" class="submenu-item-text">SPA-Шугаринг</a>
                     </li>
                     <li class="submenu-item submenu-item--menu">
-                      <span>SPA-Шугаринг</span>
+                      <a href="#" class="submenu-item-text">SPA-Шугаринг</a>
                       <ul class="submenu-inner-menu">
                         <li class="submenu-item">
-                          <span>SPA-Шугаринг</span>
+                          <a href="#" class="submenu-item-text">SPA-Шугаринг</a>
                         </li>
                         <li class="submenu-item">
-                          <span>SPA-Шугаринг</span>
+                          <a href="#" class="submenu-item-text">SPA-Шугаринг</a>
                         </li>
                         <li class="submenu-item">
-                          <span>SPA-Шугаринг</span>
+                          <a href="#" class="submenu-item-text">SPA-Шугаринг</a>
                         </li>
                       </ul>
                     </li>
                     <li class="submenu-item">
-                      <span>SPA-Шугаринг</span>
+                      <a href="#" class="submenu-item-text">SPA-Шугаринг</a>
                     </li>
                   </ul>
                 </div>
@@ -107,11 +107,12 @@
   </body>
   <script src="js/app.min.js"></script>
   <script>
-    $( ".submenu-item--menu").mouseenter(function() {
-      $(this).addClass('submenu-item--opened');
-    });
-    $( ".submenu-item--menu").mouseleave(function() {
-      $(this).removeClass('submenu-item--opened');
+    $( ".submenu-item--menu").click(function(event) {
+      event.stopPropagation();
+      if ($(window).width() <= 768) {
+        $(this).toggleClass('submenu-item--open');
+      $(this).children('.submenu-inner-menu').slideToggle(200);
+      }
     });
   </script>
 </html>
