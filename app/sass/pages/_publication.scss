@@ -280,6 +280,7 @@ body {
     position: absolute;
     right: -114px;
     bottom: 15px;
+    border-radius: 50%;
     @media screen and (max-width: $mobile-bp) {
       right: -30px;
     }
