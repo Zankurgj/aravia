@@ -381,6 +381,9 @@ body {
     max-width: 216px;
     margin: 80px auto 0 auto;
   }
+  .publication-item {
+    position: relative;
+  }
   .publication-item-comment-text {
     position: relative;
     padding: 32px 14px;
@@ -412,6 +415,17 @@ body {
       right: 14px;
       bottom: 0;
       background-image: url('../images/dest/publication/qotes-color-bottom.png');
+    }
+  }
+  .publication-item-comment-link {
+    position: absolute;
+    bottom: 10px;
+    left: 14px;
+    color: #a3a3a3;
+    text-decoration: none;
+    font-size: 12px;
+    &:hover {
+      color: rgba($color: #a3a3a3, $alpha: 0.8);
     }
   }
   .publication-comment-logo-block {
