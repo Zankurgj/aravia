@@ -153,7 +153,9 @@ body {
   .year-block1-inner {
     width: 100%;
     justify-content: space-between;
-    flex-direction: column;
+    @media screen and (max-width: $mobile-bp) {
+      flex-direction: column;
+    }
   }
   .year-block1-item {
     display: flex;
