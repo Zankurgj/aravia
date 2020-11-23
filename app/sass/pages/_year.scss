@@ -161,7 +161,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-
     @media screen and (max-width: $mobile-bp) {
       margin-bottom: 120px;
       &:last-child {
@@ -203,7 +202,7 @@ body {
       content: '';
       position: absolute;
       top: 50%;
-      left: 130px;
+      left: 120px;
       transform: translateY(-50%);
       width: 180px;
       height: 4px;
@@ -378,6 +377,7 @@ body {
     position: relative;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 45px;
     @media screen and (max-width: $mobile-bp) {
       flex-direction: column;
     }
@@ -443,6 +443,43 @@ body {
     }
     strong {
       font-weight: bold;
+    }
+  }
+  .year-block3-table {
+    width: 100%;
+    border-spacing: 0;
+    tr {
+      &:first-child {
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-size: cover;
+        background-image: url('../images/dest/year/table_bg.png');
+      }
+    }
+    th {
+      text-align: left;
+      font-size: 24px;
+      color: #ae8960;
+      padding: 6px 4px;
+    }
+    td {
+      font-size: 24px;
+      color: #1a1a1a;
+      padding: 6px 4px;
+    }
+  }
+  .year-table-btn {
+    @extend .btn;
+    display: block;
+    margin: 30px auto 0 auto;
+    font-size: 16px;
+    color: #292929;
+    text-decoration: underline;
+    @media screen and (max-width: $mobile-bp) {
+      font-size: 24px;
+    }
+    &:hover {
+      opacity: 0.8;
     }
   }
   .year-block4 {
