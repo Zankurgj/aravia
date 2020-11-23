@@ -73,11 +73,17 @@ body {
     }
   }
   .year-main-block {
+    display: block;
     background-repeat: no-repeat;
     background-position: center;
-    background-image: url('../images/dest/year/year_bg1.jpg');
+    background-image: url('../images/dest/year/main.jpg');
     background-color: #f1f3fa;
     height: 597px;
+    @media screen and (max-width: $mobile-bp) {
+      background-image: url('../images/dest/year/main_m.jpg');
+      background-size: 100%;
+      height: 687px;
+    }
   }
   .year-main-inner {
     position: relative;
@@ -231,7 +237,7 @@ body {
     text-align: center;
     color: #2b2b2b;
     font-size: 16px;
-    line-height: 1;
+    line-height: 1.4;
     z-index: 2;
     @media screen and (max-width: $mobile-bp) {
       font-size: 24px;
@@ -520,8 +526,10 @@ body {
   .year-block4-item-text {
     font-size: 16px;
     color: #111;
+    line-height: 1.5;
     @media screen and (max-width: $mobile-bp) {
       font-size: 24px;
+      line-height: 1.3;
     }
   }
   .year-block4-item--1 {
@@ -530,7 +538,7 @@ body {
     margin-bottom: 140px;
     @media screen and (max-width: $mobile-bp) {
       max-width: 375px;
-      margin-bottom: 50px;
+      margin-bottom: 60px;
     }
   }
   .year-block4-item--2 {
@@ -539,7 +547,7 @@ body {
     margin-bottom: 300px;
     @media screen and (max-width: $mobile-bp) {
       max-width: 375px;
-      margin-bottom: 50px;
+      margin-bottom: 60px;
     }
     .year-block4-item-title {
       margin-bottom: 34px;
@@ -558,7 +566,7 @@ body {
       }
     }
     @media screen and (max-width: $mobile-bp) {
-      max-width: 375px;
+      max-width: 360px;
     }
   }
   .year-block4-item-h2 {
@@ -573,6 +581,7 @@ body {
     padding: 12px 40px 10px 40px;
     @media screen and (max-width: $mobile-bp) {
       font-size: 24px;
+      margin-top: 20px;
     }
   }
   .year-block5 {
