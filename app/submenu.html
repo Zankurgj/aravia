@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>Aravia</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width" />
+    <meta property="og:image" content="img/dest/preview.jpg" />
+    <link rel="stylesheet" href="css/app.min.css" />
+  </head>
+  <script
+  src="https://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"></script>
+  <body>
+    <div class="submenu-page">
+      <div class="container">
+        <div class="row row--wrap">
+          <div class="col-sidebar">
+            <aside>
+              <nav class="submenu-wrapper">
+                <div class="submenu-item submenu-item--menu submenu-item--active">
+                  <a href="#" class="submenu-item-text">SPA-Шугаринг</a>
+                  <ul class="submenu-inner-menu">
+                    <li class="submenu-item">
+                      <a href="#" class="submenu-item-text">SPA-Шугаринг</a>
+                    </li>
+                    <li class="submenu-item">
+                      <a href="#" class="submenu-item-text">SPA-Шугаринг</a>
+                    </li>
+                    <li class="submenu-item submenu-item--menu">
+                      <a href="#" class="submenu-item-text">SPA-Шугаринг</a>
+                      <ul class="submenu-inner-menu">
+                        <li class="submenu-item submenu-item--menu">
+                          <a href="#" class="submenu-item-text">SPA-Шугаринг</a>
+                          <ul class="submenu-inner-menu">
+                            <li class="submenu-item">
+                              <a href="#" class="submenu-item-text">SPA-Шугаринг</a>
+                            </li>
+                            <li class="submenu-item">
+                              <a href="#" class="submenu-item-text">SPA-Шугаринг</a>
+                            </li>
+                            <li class="submenu-item">
+                              <a href="#" class="submenu-item-text">SPA-Шугаринг</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="submenu-item">
+                          <a href="#" class="submenu-item-text">SPA-Шугаринг</a>
+                        </li>
+                        <li class="submenu-item">
+                          <a href="#" class="submenu-item-text">SPA-Шугаринг</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="submenu-item submenu-item--menu">
+                  <a href="#" class="submenu-item-text">SPA-Шугаринг</a>
+                  <ul class="submenu-inner-menu">
+                    <li class="submenu-item">
+                      <a href="#" class="submenu-item-text">SPA-Шугаринг</a>
+                    </li>
+                    <li class="submenu-item">
+                      <a href="#" class="submenu-item-text">SPA-Шугаринг</a>
+                    </li>
+                    <li class="submenu-item">
+                      <a href="#" class="submenu-item-text">SPA-Шугаринг</a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="submenu-item submenu-item--menu">
+                  <a href="#" class="submenu-item-text">SPA-Шугаринг</a>
+                  <ul class="submenu-inner-menu">
+                    <li class="submenu-item">
+                      <a href="#" class="submenu-item-text">SPA-Шугаринг</a>
+                    </li>
+                    <li class="submenu-item submenu-item--menu">
+                      <a href="#" class="submenu-item-text">SPA-Шугаринг</a>
+                      <ul class="submenu-inner-menu">
+                        <li class="submenu-item">
+                          <a href="#" class="submenu-item-text">SPA-Шугаринг</a>
+                        </li>
+                        <li class="submenu-item">
+                          <a href="#" class="submenu-item-text">SPA-Шугаринг</a>
+                        </li>
+                        <li class="submenu-item">
+                          <a href="#" class="submenu-item-text">SPA-Шугаринг</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="submenu-item">
+                      <a href="#" class="submenu-item-text">SPA-Шугаринг</a>
+                    </li>
+                  </ul>
+                </div>
+
+              </nav>
+            </aside>
+          </div>
+
+
+          <div class="col-content" style="padding-left: 40px;">
+            <h4> Content </h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    $( ".submenu-item--menu").click(function(event) {
+      event.stopPropagation();
+      if ($(window).width() <= 768) {
+        $(this).toggleClass('submenu-item--open');
+        $(this).children('.submenu-inner-menu').slideToggle(200);
+      }
+    });
+    $( "a.submenu-item-text").click(function(event) {
+      event.stopPropagation();
+      if ($(window).width() <= 768) {
+        const href = $(this).attr('href');
+        if (href) {
+          window.location.href = href;
+        }
+      }
+    });
+  </script>
+</html>
