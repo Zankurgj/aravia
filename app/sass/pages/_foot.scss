@@ -308,6 +308,7 @@ body {
     transition: opacity $base-duration $base-timing;
     @media screen and (max-width: $mobile-bp) {
       padding: 10px;
+      opacity: 1;
     }
   }
   .foot-block3-item-title {
