@@ -1,0 +1,435 @@
+$accent: #592c82;
+$base-text: #111;
+// BP
+$mobile-bp: 1000px;
+body {
+  margin: 0;
+}
+.newyear-page {
+  font-family: $mainfamily;
+  color: $base-text;
+  font-weight: normal;
+  line-height: 1.2;
+  min-width: 750px;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  background-color: #f6f7fc;
+  * {
+    margin: 0;
+    box-sizing: border-box;
+  }
+  .rub {
+    font-family: ruble;
+  }
+  .btn--newyear {
+    @extend .btn;
+    text-decoration: none;
+    background-color: $accent;
+    color: #111;
+    font-size: 19px;
+    &:hover {
+      color: #fff;
+    }
+  }
+  .container-newyaer {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 60px;
+    @media screen and (max-width: $mobile-bp) {
+      padding: 0 15px;
+    }
+  }
+  .newyear-text {
+    color: $base-text;
+    font-size: 24px;
+    @media screen and (max-width: $mobile-bp) {
+      font-size: 16px;
+    }
+  }
+  .newyear-h1 {
+    font-size: 42px;
+    font-weight: normal;
+    color: $accent;
+    text-transform: uppercase;
+  }
+  .newyear-h2 {
+    color: $accent;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    @media screen and (max-width: $mobile-bp) {
+      font-size: 18px;
+    }
+  }
+  .newyear-h2--thin {
+    font-weight: 300;
+  }
+  .newyear-badge {
+    display: inline-block;
+    background-color: #a989d2;
+    padding: 4px 10px 0 10px;
+    font-size: 36px;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 10px;
+    @media screen and (max-width: $mobile-bp) {
+      font-size: 24px;
+    }
+  }
+  .btn-newyear {
+    @extend .btn;
+    padding: 16px 10px 14px 10px;
+    background-color: #592c82;
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    line-height: 1;
+    &:hover {
+      background-color: #dc2c7b;
+    }
+    @media screen and (max-width: $mobile-bp) {
+      font-size: 12px;
+      padding: 14px 14px 12px 14px;
+    }
+  }
+  .newyear-bg-wrapper {
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-image: url('../images/dest/newyear/bg_main.jpg');
+    @media screen and (max-width: $mobile-bp) {
+      background-image: url('../images/dest/newyear/bg_main_mobile.jpg');
+      background-size: cover;
+    }
+  }
+  .newyear-block1 {
+    padding: 220px 0 300px 0;
+    @media screen and (max-width: $mobile-bp) {
+      padding: 145px 0 145px 0;
+    }
+  }
+  .newyear-block1-inner {
+    max-width: 600px;
+  }
+  .container-newyaer-newyear-block1 {
+    max-width: 1140px;
+  }
+  .newyear-block1-title {
+    display: block;
+    margin-bottom: 28px;
+    @media screen and (max-width: $mobile-bp) {
+      width: 340px;
+      margin-bottom: 22px;
+    }
+  }
+  .newyear-block1-h1 {
+    line-height: 1.1;
+    margin-bottom: 28px;
+    margin-left: 40px;
+    text-transform: uppercase;
+    @media screen and (max-width: $mobile-bp) {
+      font-size: 28px;
+      margin-left: 25px;
+      margin-bottom: 22px;
+    }
+  }
+  .newyear-block1-text {
+    font-size: 24px;
+    color: $accent;
+    margin-left: 40px;
+    @media screen and (max-width: $mobile-bp) {
+      font-size: 16px;
+      margin-left: 24px;
+    }
+  }
+  .newyear-inner-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .newyear-block2 {
+    padding: 30px 0 90px 0;
+    @media screen and (max-width: $mobile-bp) {
+      padding: 54px 0 10px 0;
+    }
+  }
+  .newyear-h2-product {
+    margin-bottom: 32px;
+    @media screen and (max-width: $mobile-bp) {
+      margin-bottom: 16px;
+    }
+  }
+  .newyear-text--product {
+    margin-bottom: 30px;
+    word-break: break-word;
+    @media screen and (max-width: $mobile-bp) {
+      margin-bottom: 18px;
+    }
+  }
+  .newyear-block-cost-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .newyear-cost {
+    font-size: 32px;
+    font-weight: bold;
+    color: #000;
+    margin-right: 4px;
+    @media screen and (max-width: $mobile-bp) {
+      font-size: 22px;
+    }
+  }
+  .newyear-block2-inner {
+    max-width: 520px;
+    @media screen and (max-width: $mobile-bp) {
+      max-width: 340px;
+    }
+  }
+  .newyear-block-discount {
+    font-size: 22px;
+    font-weight: 300;
+    color: #aaa;
+    text-decoration: line-through;
+    margin-right: 6px;
+    @media screen and (max-width: $mobile-bp) {
+      font-size: 16px;
+    }
+  }
+  .newyear-block-cost-badge {
+    display: inline-block;
+    background-color: #a989d2;
+    padding: 4px 2px 2px 2px;
+    font-size: 16px;
+    color: #fff;
+    line-height: 1;
+    @media screen and (max-width: $mobile-bp) {
+      font-size: 12px;
+    }
+  }
+  .newyear-cost-bonus {
+    font-size: 21px;
+    font-weight: bold;
+    color: #ff3a98;
+    @media screen and (max-width: $mobile-bp) {
+      font-size: 14px;
+    }
+  }
+  .newyear-cost-bonus-text {
+    font-size: 16px;
+    color: #000;
+    font-weight: 300;
+    @media screen and (max-width: $mobile-bp) {
+      font-size: 12px;
+    }
+  }
+  .btn-newyear-cost {
+    margin-left: 20px;
+    @media screen and (max-width: $mobile-bp) {
+      margin-left: 0px;
+    }
+  }
+  .newyear-inner-text-right {
+    display: flex;
+    text-align: right;
+  }
+  .newyear-block3 {
+    padding: 75px 0 120px 0;
+    @media screen and (max-width: $mobile-bp) {
+      padding: 45px 0 70px 0;
+    }
+  }
+  .newyear-block4 {
+    padding-bottom: 110px;
+  }
+  .newyear-block5 {
+    background-color: #edecf0;
+  }
+  .newyear-block5-slide {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 827px;
+    @media screen and (max-width: $mobile-bp) {
+      justify-content: flex-start;
+      align-items: flex-start;
+      height: 1080px;
+    }
+  }
+  .newyear-block5-slide-bg--4 {
+    .newyear-block5-slide-container {
+      padding: 0 20px;
+    }
+  }
+  .newyear-block5-slide-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .newyear-block5-slide-bg--1 {
+    background-image: url('../images/dest/newyear/slide1.jpg');
+    @media screen and (max-width: $mobile-bp) {
+      background-image: url('../images/dest/newyear/slide_m1.jpg');
+    }
+  }
+  .newyear-block5-slide-bg--2 {
+    background-image: url('../images/dest/newyear/slide2.jpg');
+    @media screen and (max-width: $mobile-bp) {
+      background-image: url('../images/dest/newyear/slide_m2.jpg');
+    }
+  }
+  .newyear-block5-slide-bg--3 {
+    background-image: url('../images/dest/newyear/slide3.jpg');
+    @media screen and (max-width: $mobile-bp) {
+      background-image: url('../images/dest/newyear/slide_m3.jpg');
+    }
+  }
+  .newyear-block5-slide-bg--4 {
+    background-image: url('../images/dest/newyear/slide4.jpg');
+    @media screen and (max-width: $mobile-bp) {
+      background-image: url('../images/dest/newyear/slide_m4.jpg');
+    }
+  }
+  .newyear-block5-slide-inner {
+    text-align: right;
+    max-width: 550px;
+    @media screen and (max-width: $mobile-bp) {
+      margin: 0 auto;
+      text-align: center;
+      padding-top: 20px;
+    }
+  }
+  .newyear-block5-slide-container {
+    display: flex;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+  }
+  .newyear-block5-slide-img {
+    margin-bottom: 24px;
+    display: block;
+    @media screen and (max-width: $mobile-bp) {
+      width: 445px;
+      margin: 0 auto 24px auto;
+    }
+  }
+  .newyear-block5-slide-h2 {
+    margin-bottom: 40px;
+    @media screen and (max-width: $mobile-bp) {
+      margin-bottom: 20px;
+    }
+  }
+  .newyear-block5-slide-newyear-text {
+    margin-bottom: 40px;
+    word-break: break-word;
+  }
+  .newyear-block5-slider {
+    position: relative;
+    .slick-prev,
+    .slick-next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 50px;
+      height: 90px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      color: transparent;
+      border: none;
+      outline: none;
+      font-size: 0;
+      line-height: 0;
+      z-index: 100;
+      @media screen and (max-width: $mobile-bp) {
+        width: 30px;
+        height: 70px;
+      }
+      &:hover {
+        opacity: 0.7;
+      }
+      &.slick-disabled {
+        opacity: 0.3;
+        cursor: default;
+      }
+    }
+    .slick-prev {
+      left: 60px;
+      background-image: url('../images/dest/newyear/arrow_prev.png');
+      @media screen and (max-width: $mobile-bp) {
+        left: 30px;
+      }
+    }
+    .slick-next {
+      right: 60px;
+      background-image: url('../images/dest/newyear/arrow_next.png');
+      @media screen and (max-width: $mobile-bp) {
+        right: 30px;
+      }
+    }
+    .newyear-block-cost-block {
+      @media screen and (max-width: $mobile-bp) {
+        justify-content: center;
+      }
+      .newyear-block-cost-wrapper {
+        @media screen and (max-width: $mobile-bp) {
+          margin-right: 40px;
+        }
+      }
+      .btn-newyear {
+        @media screen and (max-width: $mobile-bp) {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  .newyear-bg-wrapper2 {
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-image: url('../images/dest/newyear/bg_main2.jpg');
+    background-color: #fdfdfd;
+    @media screen and (max-width: $mobile-bp) {
+      background-image: url('../images/dest/newyear/bg_main2_mobile.jpg');
+      background-size: cover;
+    }
+  }
+  .btn-newyear-cost-wrapper {
+    margin-top: 30px;
+    @media screen and (max-width: $mobile-bp) {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+    .btn-newyear-cost {
+      max-width: 210px;
+      width: 100%;
+      @media screen and (max-width: $mobile-bp) {
+        max-width: 160px;
+        flex-grow: 1;
+      }
+      &:first-child {
+        margin-left: 0;
+        @media screen and (max-width: $mobile-bp) {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+  .newyear-block6 {
+    padding: 145px 0 100px 0;
+    @media screen and (max-width: $mobile-bp) {
+      padding: 25px 0 40px 0;
+    }
+  }
+  .newyear-h2-product-block6 {
+    margin-bottom: 0;
+  }
+  .newyear-h2--thin {
+    margin-bottom: 40px;
+  }
+}
