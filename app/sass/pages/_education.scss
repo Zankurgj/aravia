@@ -1,0 +1,1004 @@
+$accent: #592c82;
+// FONTS
+$base-text: #272727;
+
+// BP
+$mobile-bp: 1000px;
+body {
+  margin: 0;
+}
+.education-page {
+  font-family: $mainfamily;
+  color: $base-text;
+  font-weight: normal;
+  line-height: 1.3;
+  min-width: 750px;
+  -webkit-font-smoothing: antialiased;
+
+  .text-center {
+    text-align: center;
+  }
+  * {
+    margin: 0;
+    box-sizing: border-box;
+  }
+  .rub {
+    font-family: ruble;
+  }
+  .row--wrap {
+    flex-wrap: wrap;
+  }
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+  .btn--foot {
+    @extend .btn;
+    text-decoration: none;
+    background-color: $accent;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 20px;
+    &:hover {
+      color: #fff;
+      background-color: rgba($color: $accent, $alpha: 0.8);
+    }
+  }
+  .container-ed {
+    max-width: 1270px;
+    margin: 0 auto;
+    padding: 0 60px;
+    @media screen and (max-width: $mobile-bp) {
+      padding: 0 30px;
+    }
+  }
+  .ed-block1 {
+    background-image: url('../images/dest/education/b1.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    @media screen and (max-width: $mobile-bp) {
+      height: 800px;
+      background-position: bottom right;
+      padding-top: 80px;
+    }
+  }
+  .ed-btn--link {
+    color: $accent;
+    transition: color $base-duration $base-timing;
+    &:hover {
+      color: rgba($color: $accent, $alpha: 0.8);
+    }
+  }
+  .h1-ed {
+    font-size: 45px;
+    font-weight: bold;
+    color: $accent;
+    text-transform: uppercase;
+  }
+  .h2-ed {
+    font-size: 36px;
+    font-weight: bold;
+    color: $accent;
+    text-transform: uppercase;
+    @media screen and (max-width: $mobile-bp) {
+      font-size: 32px;
+    }
+    .underline {
+      display: inline-block;
+      position: relative;
+      font-weight: normal;
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 4px;
+        background-color: #d5c5ec;
+      }
+    }
+  }
+  .h3-ed {
+    font-size: 24px;
+    font-weight: bold;
+    color: $accent;
+    text-transform: uppercase;
+  }
+  .ed-block1-inner {
+    display: table;
+    padding: 148px 0;
+    @media screen and (max-width: $mobile-bp) {
+      padding: 0;
+      margin: 0 auto;
+    }
+  }
+  .ed-block1-h1 {
+    margin-bottom: 72px;
+    position: relative;
+    @media screen and (max-width: $mobile-bp) {
+      font-size: 35px;
+      margin-bottom: 42px;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -22px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 502px;
+      height: 2px;
+      background-color: #d5c5ec;
+    }
+  }
+  .ed-block1-text {
+    font-size: 35px;
+    color: #676767;
+    text-align: center;
+    font-weight: normal;
+    text-transform: uppercase;
+    @media screen and (max-width: $mobile-bp) {
+      font-size: 25px;
+    }
+  }
+  .ed-block2 {
+    display: block;
+    background-color: #e2d6f2;
+  }
+  .ed-block2-nav {
+    display: flex;
+    // align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    padding: 18px 0;
+    @media screen and (max-width: $mobile-bp) {
+      height: 60px;
+    }
+  }
+  .ed-block2-nav-item {
+    height: 100%;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $accent;
+    font-weight: bold;
+    font-size: 24px;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    padding: 0 20px;
+    border-right: 2px solid $accent;
+    transition: color $base-timing $base-duration;
+    @media screen and (max-width: 1200) {
+      font-size: 20px;
+    }
+    @media screen and (max-width: $mobile-bp) {
+      font-size: 15px;
+      padding: 0 10px;
+    }
+    &:hover {
+      color: rgba($color: $accent, $alpha: 0.8);
+    }
+    &:last-child {
+      border-right: none;
+    }
+  }
+  .ed-block3 {
+    height: 610px;
+    background-image: url('../images/dest/education/bg2.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #f6f2f8;
+    @media screen and (max-width: $mobile-bp) {
+      height: auto;
+      background-image: none;
+    }
+  }
+  .ed-block3-text-block {
+    display: flex;
+    justify-content: flex-end;
+    height: 100%;
+  }
+  .ed-block3-inner {
+    position: relative;
+    margin-top: 150px;
+    margin-right: 69px;
+    @media screen and (max-width: $mobile-bp) {
+      margin-top: 60px;
+      margin-right: 0;
+      width: 100%;
+    }
+  }
+  .ed-block3-h3 {
+    text-align: center;
+    margin-bottom: 12px;
+  }
+  .ed-block3-text {
+    max-width: 438px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 300;
+    @media screen and (max-width: $mobile-bp) {
+      max-width: none;
+    }
+  }
+  .ed-block3-features {
+    position: absolute;
+    right: -70px;
+    bottom: -295px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 60px 0 0 0;
+    background-color: #fff;
+    width: 574px;
+    box-shadow: 0px 11px 7px 0px rgba(40, 40, 40, 0.1);
+    @media screen and (max-width: $mobile-bp) {
+      position: static;
+      right: 0;
+      bottom: 0;
+      box-shadow: none;
+      width: auto;
+      background-color: transparent;
+    }
+  }
+  .ed-block3-features-items {
+    flex-basis: 50%;
+    max-width: 50%;
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  .ed-block3-features-items-img {
+    margin-bottom: 30px;
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+  .ed-block3-features-items-text {
+    color: $accent;
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+  .ed-block4 {
+    padding: 30px 0;
+    background-image: url('../images/dest/education/bg4.png'),
+      linear-gradient(0deg, #f6f2f8 50%, #fff 50%);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    @media screen and (max-width: $mobile-bp) {
+      background-image: url('../images/dest/education/bg4.png');
+      background-size: contain;
+      background-position: center;
+    }
+  }
+  .ed-block4-item {
+    display: inline-block;
+    text-align: center;
+    @media screen and (max-width: $mobile-bp) {
+      margin-bottom: 30px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .ed-block4-item--first {
+    margin-left: 100px;
+    @media screen and (max-width: $mobile-bp) {
+      display: table;
+      margin: 0 auto;
+    }
+  }
+  .ed-block4-item-h3 {
+    margin-bottom: 10px;
+  }
+  .ed-block4-item-text {
+    font-size: 24px;
+    font-weight: 300;
+  }
+  .row-ed-block4 {
+    justify-content: space-between;
+    margin-top: 180px;
+    margin-bottom: 116px;
+    @media screen and (max-width: $mobile-bp) {
+      flex-direction: column;
+      margin-top: 60px;
+      margin-bottom: 60px;
+    }
+  }
+  .ed-block4-btn-boot {
+    display: table;
+    margin: 0 auto;
+  }
+  .ed-block4-item-btn {
+    display: inline-block;
+    margin-top: 12px;
+  }
+  .ed-block5-video-container {
+    position: relative;
+    height: 448px;
+    overflow: hidden;
+  }
+  .ed-block5-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+  }
+  .ed-block5-video-btn {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 124px;
+    height: 124px;
+    background-image: url('../images/dest/education/play-button.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: opacity $base-duration $base-timing;
+    z-index: 2;
+    &:hover {
+      opacity: 0.8;
+    }
+    &.hide {
+      visibility: hidden;
+      opacity: 0;
+    }
+    span {
+      @extend .visually-hidden;
+    }
+  }
+  .ed-block5-video-pause {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    display: none;
+    span {
+      @extend .visually-hidden;
+    }
+    &.show {
+      display: block;
+    }
+  }
+  .ed-block6 {
+    padding: 60px 0 40px;
+    @media screen and (max-width: $mobile-bp) {
+      padding: 30px 0;
+    }
+  }
+  .ed-block6-h2 {
+    margin-bottom: 50px;
+  }
+  .ed-block6-slider {
+    margin-bottom: 30px;
+    .slick-list {
+      padding: 10px 0;
+    }
+    .slick-track {
+      display: flex !important;
+    }
+
+    .slick-slide {
+      height: inherit !important;
+    }
+  }
+  .ed-slider-arrows {
+    .slick-prev,
+    .slick-next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 30px;
+      height: 30px;
+      background-repeat: no-repeat;
+      background-position: center;
+      color: transparent;
+      border: none;
+      outline: none;
+      font-size: 0;
+      line-height: 0;
+      &:hover {
+        opacity: 0.7;
+      }
+      &.slick-disabled {
+        opacity: 0.3;
+        cursor: default;
+      }
+    }
+    .slick-prev {
+      right: 100%;
+      background-image: url('../images/dest/education/arrow-prev.png');
+    }
+    .slick-next {
+      left: 100%;
+      background-image: url('../images/dest/education/arrow-next.png');
+    }
+  }
+  .slick-slide {
+    &:focus {
+      outline: none;
+    }
+  }
+  .ed-block6-slider-item-col {
+    padding: 0 5px;
+  }
+  .ed-block6-slider-item {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-shadow: 0px 7px 7px 0px rgba(40, 40, 40, 0.1);
+    background-color: #fff;
+    height: 100%;
+  }
+  .ed-block6-slider-item-img {
+    margin-bottom: 24px;
+    img {
+      display: block;
+      max-width: 100%;
+    }
+  }
+  .ed-block6-slider-item-text-block {
+    position: relative;
+    padding-left: 18px;
+    margin-bottom: 30px;
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 5px;
+      background-color: #d5c5ec;
+    }
+  }
+  .ed-block6-slider-item-name {
+    font-size: 16px;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+  .ed-block6-slider-item-title {
+    color: $accent;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  .ed-block6-slider-item-inner {
+    padding: 0 12px 28px 12px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    height: 100%;
+  }
+  .ed-block6-slider-item-bottom {
+    flex-grow: 1;
+    margin-top: auto;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+  }
+  .ed-block6-slider-item-param {
+    display: inline-block;
+    font-size: 14px;
+    color: $accent;
+    padding-left: 24px;
+    background-repeat: no-repeat;
+    background-position: center left;
+    margin-right: 10px;
+    line-height: 1.7;
+  }
+  .ed-block6-slider-item-param--maney {
+    background-image: url('../images/dest/education/maney.png');
+  }
+  .ed-block6-slider-item-param--clock {
+    background-image: url('../images/dest/education/clock.png');
+  }
+  .ed-block6-slider-item-sub-text {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    font-size: 12px;
+    color: $accent;
+  }
+  .ed-block6-slider-item-btn {
+    margin-left: auto;
+    display: inline-block;
+    font-size: 12px;
+    color: $accent;
+    background-color: #d5c5ec;
+    padding: 8px 10px 7px 10px;
+    text-decoration: none;
+    transition: opacity $base-duration $base-timing;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  .ed-block6-btn-link {
+    display: table;
+    margin: 0 auto;
+  }
+  .ed-block7 {
+    padding: 40px 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('../images/dest/education/bg7.png');
+    background-size: cover;
+  }
+  .ed-block7-h2 {
+    display: table;
+    position: relative;
+    margin: 0 auto 60px auto;
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 4px;
+      background-color: #d5c5ec;
+    }
+  }
+  .ed-block7-container {
+    max-width: 1150px;
+  }
+  .ed-block7-slide-head {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 36px;
+    @media screen and (max-width: $mobile-bp) {
+      padding: 0 30px;
+    }
+  }
+  .ed-block7-slide-course,
+  .ed-block7-slide-address,
+  .ed-block7-slide-data {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .ed-block7-slide-name {
+    color: $accent;
+    text-transform: uppercase;
+    font-size: 24px;
+  }
+  .ed-block7-slide-right {
+    text-align: right;
+  }
+  .ed-block7-slide-text {
+    position: relative;
+    padding: 40px 70px 68px;
+    font-size: 16px;
+    line-height: 24px;
+    &::before,
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 44px;
+      height: 30px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    &::before {
+      left: 0;
+      top: 0;
+      background-image: url('../images/dest/education/quotes-top.png');
+    }
+    &::after {
+      right: 0;
+      bottom: 0;
+      background-image: url('../images/dest/education/quotes-bottom.png');
+    }
+  }
+  .ed-block7-btn {
+    display: table;
+    margin: 30px auto 0 auto;
+    font-size: 18px;
+    color: $accent;
+    background-color: #d5c5ec;
+    padding: 13px 40px 12px 40px;
+    text-decoration: none;
+    transition: opacity $base-duration $base-timing;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  .ed-block8 {
+    padding: 50px 0 45px;
+  }
+  .ed-block8-h2 {
+    margin-bottom: 60px;
+  }
+  .ed-block8-slider-main {
+    margin-bottom: 50px;
+  }
+  .ed-block8-slide-main {
+    display: flex;
+  }
+  .ed-block8-slide-main-img {
+    img {
+      display: block;
+      width: 322px;
+      height: auto;
+    }
+  }
+  .ed-block8-slide-main-text-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-left: 30px;
+  }
+  .ed-block8-slide-main-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: $accent;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .ed-block8-slide-main-head {
+    padding-left: 8px;
+    border-left: 5px solid #d5c5ec;
+    margin-bottom: 30px;
+  }
+  .ed-block8-slide-main-head-item {
+    font-size: 16px;
+    line-height: 24px;
+    span {
+      color: $accent;
+    }
+  }
+  .ed-block8-slide-main-title {
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+  }
+  .ed-block8-slide-main-text {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 18px;
+  }
+  .ed-block8-slide-main-link {
+    font-size: 16px;
+    line-height: 24px;
+    color: $accent;
+  }
+  .ed-block8-slider-nav {
+    padding: 0 60px;
+    @media screen and (max-width: $mobile-bp) {
+      padding: 0;
+    }
+    .slick-prev {
+      left: 15px;
+      right: auto;
+      @media screen and (max-width: $mobile-bp) {
+        left: auto;
+        right: 100%;
+      }
+    }
+    .slick-next {
+      right: 15px;
+      left: auto;
+      @media screen and (max-width: $mobile-bp) {
+        right: auto;
+        left: 100%;
+      }
+    }
+  }
+  .ed-block8-slide-nav-col {
+    padding: 0 4px;
+
+    &.slick-current {
+      .ed-block8-slide-nav {
+        border-color: $accent;
+      }
+    }
+  }
+  .ed-block8-slide-nav {
+    cursor: pointer;
+    width: 200px;
+    border: 3px solid transparent;
+    &:hover {
+      .ed-block8-slide-nav-name {
+        border-color: rgba($color: #d5c5ec, $alpha: 0.8);
+      }
+    }
+  }
+  .ed-block8-slide-nav-img {
+    padding-top: 125%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  .ed-block8-slide-nav-name {
+    color: $accent;
+    font-size: 18px;
+    text-align: center;
+    padding: 12px 0 8px;
+    border-bottom: 8px solid #d5c5ec;
+  }
+  .ed-block9 {
+    padding: 50px 0;
+    background-color: #f7f9fb;
+  }
+  .ed-block9-h2 {
+    position: relative;
+    display: table;
+    margin: 0 auto 12px auto;
+    &::before {
+      content: '';
+      right: -70px;
+      bottom: 0;
+      position: absolute;
+      height: 5px;
+      width: 200px;
+      background-color: #d5c5ec;
+    }
+  }
+  .ed-block9-text {
+    margin-bottom: 20px;
+  }
+  .ed-block9-slider {
+    .slick-track {
+      display: flex;
+      align-items: center;
+    }
+    .slick-dots {
+      padding: 0;
+      display: flex;
+      list-style: none;
+      justify-content: center;
+      margin-top: 20px;
+      li {
+        margin-right: 5px;
+        line-height: 0;
+        &:last-child {
+          margin-right: 0;
+        }
+        &.slick-active {
+          button {
+            background-color: $accent;
+          }
+        }
+      }
+    }
+    button {
+      color: transparent;
+      border: none;
+      outline: none;
+      font-size: 0;
+      line-height: 0;
+      width: 10px;
+      height: 10px;
+      background-color: #d5c5ec;
+    }
+  }
+  .ed-block9-slide {
+    padding: 0 20px;
+    img {
+      max-width: 100%;
+    }
+  }
+  .ed-block10 {
+    padding: 55px 0;
+  }
+  .ed-block10-h2 {
+    margin-bottom: 60px;
+    @media screen and (max-width: $mobile-bp) {
+      margin-bottom: 30px;
+    }
+  }
+  .ed-block10-news-wrapper {
+    border-bottom: 2px solid #d5c5ec;
+    @media screen and (max-width: $mobile-bp) {
+      flex-direction: column;
+      border-bottom: none;
+    }
+  }
+  .ed-block10-news-col {
+    flex-basis: calc(50% - 25px);
+    max-width: calc(50% - 25px);
+    margin-right: 50px;
+    @media screen and (max-width: $mobile-bp) {
+      flex-basis: 100%;
+      max-width: 100%;
+      margin-right: 0;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  .ed-block10-news-col--2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .ed-block10-news {
+      &:first-child {
+        border-bottom: 2px solid #d5c5ec;
+      }
+    }
+  }
+  .ed-block10-news {
+    padding: 20px 0;
+    @media screen and (max-width: $mobile-bp) {
+      border-bottom: 2px solid #d5c5ec;
+    }
+  }
+  .ed-block10-news-img {
+    margin-bottom: 20px;
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+  .ed-block10-news-title {
+    color: $accent;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .ed-block10-news-text {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 20px;
+  }
+  .ed-block10-news-text-footer {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .ed-block10-news-date {
+    font-size: 12px;
+  }
+  .ed-block10-news-link {
+    font-size: 14px;
+  }
+  .ed-block10-news--small {
+    display: flex;
+    .ed-block10-news-img {
+      width: 166px;
+      flex: 0 0 auto;
+      margin: 0 22px 0 0;
+    }
+  }
+  .ed-block10-btn-link {
+    display: table;
+    margin: 30px auto 0 auto;
+  }
+  .ed-block11 {
+    padding: 55px 0 30px;
+    background-color: #f7f9fb;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    // background-size: cover;
+    background-image: url('../images/dest/education/bg11.png');
+  }
+  .ed-block11-h2 {
+    margin-bottom: 20px;
+  }
+  .ed-block11-form {
+    max-width: 570px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .ed-block11-text {
+    font-weight: 300;
+    margin-bottom: 32px;
+  }
+  .ed-input {
+    width: 100%;
+    font-weight: 300;
+    line-height: 24px;
+    background-color: #fff;
+    border: none;
+    padding: 13px 24px;
+    font-family: $mainfamily;
+    &::placeholder {
+      color: #a3a3a3;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  .ed-block11-input-wrapper {
+    display: block;
+    width: 100%;
+    margin-bottom: 18px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .ed-input--textarea {
+    resize: none;
+    height: 100px;
+  }
+  .ed-input--seclect {
+    appearance: none;
+    &::-ms-expand {
+      display: none;
+    }
+  }
+  .ed-block11-input-wrapper--select {
+    position: relative;
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 36px;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: #d5c5ec;
+      background-image: url('../images/dest/education/select-arrow.png');
+      pointer-events: none;
+    }
+  }
+  .ed-block11-checkbox {
+    @extend .visually-hidden;
+    &:checked + .ed-block11-checkbox-fake {
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+  .ed-block11-checkbox-fake {
+    position: relative;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-color: #fff;
+    border-radius: 2px;
+    margin-right: 8px;
+    vertical-align: middle;
+    border: 1px solid #a3a3a3;
+    cursor: pointer;
+    line-height: 0;
+    &::after {
+      content: '';
+      position: absolute;
+      left: 4px;
+      top: 1px;
+      width: 5px;
+      height: 8px;
+      border-right: 1px solid $accent;
+      border-bottom: 1px solid $accent;
+      transform: rotate(45deg);
+      opacity: 0;
+    }
+  }
+  .ed-block11-btn {
+    display: block;
+    margin: 32px auto 0 auto;
+    @extend .btn;
+    text-decoration: none;
+    background-color: $accent;
+    color: #fff;
+    font-size: 24px;
+    padding: 10px 60px 11px 60px;
+    &:hover {
+      color: #fff;
+      background-color: rgba($color: $accent, $alpha: 0.8);
+    }
+    &:disabled {
+      background-color: rgba($color: $accent, $alpha: 0.4);
+      &:hover {
+        color: #fff;
+        background-color: rgba($color: $accent, $alpha: 0.4);
+        cursor: default;
+      }
+    }
+  }
+}
