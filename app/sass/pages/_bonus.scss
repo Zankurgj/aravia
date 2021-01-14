@@ -1,6 +1,6 @@
 $accent: #592c82;
 $second: #a989d2;
-$pink: #d7569c;
+$pink: #f655a0;
 // FONTS
 $base-text: #2b2b2b;
 $text-second: #111;
@@ -351,6 +351,7 @@ body {
     position: relative;
     border-radius: 50%;
     background-repeat: no-repeat;
+    background-image: url('../images/dest/bonus/maney.png');
     background-position: center;
     margin-right: 18px;
   }
@@ -359,18 +360,22 @@ body {
     color: $pink;
     width: 150px;
     height: 150px;
+    background-size: 170px;
+    background-position: center left -6px;
   }
   .bonus-block3-circle--2 {
     background-color: $second;
     color: $second;
     width: 90px;
     height: 90px;
+    background-size: 90px;
   }
   .bonus-block3-circle--3 {
     background-color: $accent;
     color: $accent;
     width: 50px;
     height: 50px;
+    background-size: 50px;
     .bonus-block3-number {
       top: -65px;
     }
