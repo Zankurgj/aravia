@@ -216,7 +216,7 @@
           <h2 class="h2-brush brush-page6-h3 title--underline">Уход после массажа</h2>
           <p class="brush-page6-text">После душа для устранения чуства сухости  и стянутости рекомендуется нанести 
             крем или молочко для тела. </p>
-            <div class="row row--wrap brush-page6-row">
+            <div class="brush-page6-slider" id="productSlider">
               <div class="brush-page6-item-col">
                 <div class="brush-page6-item">
                   <div class="brush-page6-item-img">
@@ -256,4 +256,35 @@
     </div>  
   </body>
   <script src="js/app.min.js"></script>
+  <script>
+    if ($.fn.slick != undefined) {
+      var $slider = $('#productSlider');
+      function showSliderScreen($widthScreen) {
+        if ($widthScreen <= '1000') {
+          if (!$slider.hasClass('slick-initialized')) {
+            $slider.slick({
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              infinite: true,
+              arrows: true,
+              dots: false,
+              speed: 200,
+              autoplay: false,
+            });
+          }
+        } else {
+          if ($slider.hasClass('slick-initialized')) {
+            $slider.slick('unslick');
+          }
+        }
+      }
+      var widthScreen = $(window).width();
+      $(window)
+        .ready(showSliderScreen(widthScreen))
+        .resize(function () {
+          var widthScreen = $(window).width();
+          showSliderScreen(widthScreen);
+        });
+    }
+  </script>
 </html>

@@ -390,16 +390,50 @@ body {
       font-size: 20px;
     }
   }
+  .brush-page6-slider {
+    display: flex;
+    .slick-prev,
+    .slick-next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 30px;
+      height: 30px;
+      background-repeat: no-repeat;
+      background-position: center;
+      color: transparent;
+      border: none;
+      outline: none;
+      font-size: 0;
+      line-height: 0;
+      &:hover {
+        opacity: 0.7;
+      }
+      &.slick-disabled {
+        opacity: 0.3;
+        cursor: default;
+      }
+    }
+    .slick-prev {
+      left: 60px;
+      background-image: url('../images/dest/brush/arrow-prev.png');
+    }
+    .slick-next {
+      right: 60px;
+      background-image: url('../images/dest/brush/arrow-next.png');
+    }
+    .slick-slide {
+      &:focus {
+        outline: none;
+      }
+    }
+  }
   .brush-page6-item-col {
     max-width: calc(100% / 3);
     flex-basis: calc(100% / 3);
     @media screen and (max-width: $mobile-bp) {
-      max-width: 100%;
-      flex-basis: 100%;
-      margin-bottom: 60px;
-      &:last-child {
-        margin-bottom: 0;
-      }
+      max-width: auto;
+      flex-basis: auto;
     }
   }
   .brush-page6-item {
