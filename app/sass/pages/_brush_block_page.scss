@@ -1,0 +1,114 @@
+.block-brush-wrapper {
+  font-family: $mainfamily;
+  line-height: 1.3;
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-image: url('../images/dest/brush_block/brush_block-bg.png');
+  @media screen and (max-width: 1670px) {
+    background-position: right -200px top;
+  }
+  @media screen and (max-width: 1300px) {
+    background-position: right -300px top;
+  }
+  @media screen and (max-width: 750px) {
+    background-image: none;
+    background-color: #f5f5f6;
+  }
+  * {
+    margin: 0;
+    box-sizing: border-box;
+  }
+  .block-brush-container {
+    max-width: 1100px;
+    position: relative;
+    margin: 0 auto;
+    padding: 60px;
+    @media screen and (max-width: 750px) {
+      padding: 60px 30px;
+    }
+  }
+  .block-brush-title {
+    display: table;
+    padding: 0 0 5px;
+    position: relative;
+    margin: 0 auto 50px auto;
+    border-bottom: 2px solid #4e8d1b;
+    text-align: center;
+    text-transform: uppercase;
+    color: #111;
+    font-weight: normal;
+    font-size: 24px;
+    &::after {
+      content: '';
+      width: 40px;
+      height: 40px;
+      background: #4e8d1b;
+      position: absolute;
+      left: -13px;
+      bottom: 12px;
+      z-index: -1;
+    }
+  }
+  .block-brush-text {
+    margin-bottom: 30px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 300;
+    color: #2b2b2b;
+    @media screen and (max-width: 750px) {
+      font-size: 20px;
+    }
+  }
+  .block-brush-list {
+    margin-bottom: 50px;
+    list-style: none;
+    padding: 0;
+    li {
+      position: relative;
+      padding-left: 20px;
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 7px;
+        width: 6px;
+        height: 6px;
+        background-color: #4e8d1b;
+      }
+    }
+  }
+  .block-brush-list-item {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 300;
+    color: #2b2b2b;
+    @media screen and (max-width: 750px) {
+      font-size: 20px;
+    }
+  }
+  .block-brush-btn {
+    appearance: none;
+    font-family: 'Circe', Arial, sans-serif;
+    text-transform: lowercase;
+    background: #4d8d1b;
+    transition: 0.15s linear;
+    outline: none;
+    border: 0;
+    display: inline-flex;
+    height: 50px;
+    text-decoration: none;
+    align-items: center;
+    color: #fff;
+    justify-content: center;
+    padding: 0 25px;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: none;
+    border-radius: 0;
+    &:hover {
+      background: #4d8d1b;
+      opacity: 0.8;
+      color: #fff;
+    }
+  }
+}
