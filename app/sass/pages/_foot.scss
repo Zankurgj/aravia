@@ -306,6 +306,7 @@ body {
     background-color: rgba($color: $accent, $alpha: 0.8);
     opacity: 0;
     transition: opacity $base-duration $base-timing;
+    padding: 0 5px;
     @media screen and (max-width: $mobile-bp) {
       padding: 10px;
       opacity: 1;
