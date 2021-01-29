@@ -325,15 +325,10 @@ body {
   .ed-block5-video-container {
     position: relative;
     height: 448px;
-    overflow: hidden;
-  }
-  .ed-block5-video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    min-width: 100%;
-    min-height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url('../images/dest/education/poster.png');
   }
   .ed-block5-video-btn {
     position: absolute;
@@ -356,19 +351,6 @@ body {
     }
     span {
       @extend .visually-hidden;
-    }
-  }
-  .ed-block5-video-pause {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 3;
-    display: none;
-    span {
-      @extend .visually-hidden;
-    }
-    &.show {
-      display: block;
     }
   }
   .ed-block6 {
@@ -999,6 +981,62 @@ body {
         background-color: rgba($color: $accent, $alpha: 0.4);
         cursor: default;
       }
+    }
+  }
+  .education-comment-popup {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    &.show {
+      display: block;
+    }
+  }
+  .education-comment-form {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 570px;
+    background-color: #eceeef;
+    padding: 40px;
+  }
+  .education-comment-popup-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #1e1e1e;
+    opacity: 0.9;
+    z-index: 1;
+    cursor: pointer;
+  }
+  .education-comment-form-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    color: #592c82;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  .education-comment-close {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: -20px;
+    right: -42px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg height='487.595' viewBox='0 0 365.696 365.696' width='487.595' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23fff' d='m243.1875 182.859375 113.132812-113.132813c12.5-12.5 12.5-32.765624 0-45.246093l-15.082031-15.082031c-12.503906-12.503907-32.769531-12.503907-45.25 0l-113.128906 113.128906-113.132813-113.152344c-12.5-12.5-32.765624-12.5-45.246093 0l-15.105469 15.082031c-12.5 12.503907-12.5 32.769531 0 45.25l113.152344 113.152344-113.128906 113.128906c-12.503907 12.503907-12.503907 32.769531 0 45.25l15.082031 15.082031c12.5 12.5 32.765625 12.5 45.246093 0l113.132813-113.132812 113.128906 113.132812c12.503907 12.5 32.769531 12.5 45.25 0l15.082031-15.082031c12.5-12.503906 12.5-32.769531 0-45.25zm0 0'/%3E%3C/svg%3E");
+    opacity: 0.9;
+    &:hover {
+      opacity: 0.6;
     }
   }
 }
