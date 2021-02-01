@@ -97,8 +97,8 @@
             <h2 class="foot-h2 block3-h2 text-center">
               <span class="h2-img h2-underline">Активные компоненты</span>
             </h2>
-            <img class="foot-block3-bg-img1" src="./images/dest/foot/b3_bg1.png" alt="крем" aria-hidden="true">
-            <img class="foot-block3-bg-img2" src="./images/dest/foot/b3_bg2.png" alt="крем" aria-hidden="true">
+            <img class="foot-block3-bg-img1" src="./images/dest/foot/bg-f2.png" alt="крем" aria-hidden="true">
+            <img class="foot-block3-bg-img2" src="./images/dest/foot/bg-f1.png" alt="крем" aria-hidden="true">
             <div class="row row--wrap foot-block3-inner">
               <div class="foot-block3-col">
                 <div class="foot-block3-item" style="background-image: url('../images/dest/foot/b3_1.png');">
@@ -379,13 +379,46 @@
 
                 <div class="foot-block6-item">
                   <img src="./images/dest/foot/handshake.png" alt="сотрудничество " class="foot-block6-item-icon">
-                  <a href="#" class="foot-block6-item-btn">сотрудничество </a>
+                  <button onclick="onTogglePopup()" class="foot-block6-item-btn">сотрудничество </button>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        <div class="foot-cooperation-popup" id="cooperationPopup">
+          <div class="foot-cooperation-popup-overlay" onclick="onTogglePopup()"></div>
+          <form action="" class="foot-cooperation-form">
+            <button type="button" class="foot-cooperation-btn-close" onclick="onTogglePopup()">
+              <span class="visually-hidden">Закрыть</span>
+            </button>
+            <p class="foot-cooperation-form-title">Сотрудничество</p>
+            <label class="foot-input-wrapper">
+              <span class="visually-hidden">E-mail</span>
+              <input type="text" placeholder="E-mail*" required class="foot-input">
+            </label>
+            <label class="foot-input-wrapper">
+              <span class="visually-hidden">Контактный телефон</span>
+              <input type="text" placeholder="Контактный телефон*" required class="foot-input" id="phone">
+            </label>
+            <label class="foot-input-wrapper foot-checkbox-wrapper">
+              <input type="checkbox" class="foot-checkbox" required>
+              <span class="foot-checkbox-fake"></span>
+              <span class="foot-checkbox-text">Согласие на обработку персональных данных</span>
+            </label>
+            <label class="foot-input-wrapper">
+              <span class="visually-hidden"></span>
+              <textarea placeholder="Ваше сообщение" class="foot-input foot-input--textarea"></textarea>
+            </label>
+            <button type="submit" class="btn--foot btn--foot-cooperation">Отправить</button>
+          </form>
+        </div>
     </div>
   </body>
   <script src="js/app.min.js"></script>
+  <script>
+    function onTogglePopup() {
+      document.querySelector('#cooperationPopup').classList.toggle('show');
+    }
+    $('#phone').mask('(999) 999-99-99');
+  </script>
 </html>

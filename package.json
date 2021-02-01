@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "imagesloaded": "^4.1.4",
+    "jquery.maskedinput": "^1.4.1",
     "masonry-layout": "^4.2.2",
     "slick-carousel": "^1.8.1",
     "swiper": "^6.1.2"
