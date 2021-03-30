@@ -11,10 +11,10 @@ $white: #fff;
 
 // BP
 $mobile-bp: 1000px;
-
+$mobile-s: 750px;
 body {
   margin: 0;
-  min-width: 768px;
+  min-width: 320px;
 }
 .promo2-main-container {
   overflow: hidden;
@@ -42,13 +42,13 @@ body {
   margin: 0;
   padding: 70px 0 116px 0;
   background-color: #f9fafb;
-  background-image: url('../images/dest/buble-main.jpg');
+  background-image: url("../images/dest/buble-main.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   @media screen and (max-width: 768px) {
     padding: 20px 0 56px 0;
-    background-image: url('../images/dest/buble1.png');
+    background-image: url("../images/dest/buble1.png");
     background-size: 200px;
     background-position: bottom right -100px;
   }
@@ -90,6 +90,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-width: 0;
 }
 .promo2-h1 {
   font-size: 46px;
@@ -102,6 +103,9 @@ body {
   @media screen and (max-width: $mobile-bp) {
     font-size: 36px;
     margin: 0 0 16px 0;
+  }
+  @media screen and (max-width: $mobile-s) {
+    font-size: 26px;
   }
 }
 .promo2-h2 {
@@ -116,6 +120,9 @@ body {
     text-align: center;
     margin: 0 0 25px 0;
   }
+  @media screen and (max-width: $mobile-s) {
+    font-size: 22px;
+  }
 }
 .promo2-main-text {
   font-size: 24px;
@@ -126,6 +133,9 @@ body {
     font-size: 32px;
     text-align: center;
     margin: 0 0 40px 0;
+  }
+  @media screen and (max-width: $mobile-s) {
+    font-size: 22px;
   }
 }
 .btn-promo2 {
@@ -157,6 +167,10 @@ body {
     font-size: 32px;
     padding: 26px 20px 24px 20px;
   }
+  @media screen and (max-width: $mobile-bp) {
+    font-size: 18px;
+    padding: 16px 10px 14px 10px;
+  }
 }
 
 .promo2-reasons-block {
@@ -176,12 +190,18 @@ body {
   @media screen and (max-width: $mobile-bp) {
     font-size: 32px;
   }
+  @media screen and (max-width: $mobile-s) {
+    font-size: 22px;
+  }
   strong {
     font-size: 42px;
     color: $accent;
     font-weight: 900;
     @media screen and (max-width: $mobile-bp) {
       font-size: 42px;
+    }
+    @media screen and (max-width: $mobile-s) {
+      font-size: 32px;
     }
   }
 }
@@ -217,13 +237,13 @@ body {
   margin-bottom: 20px;
 }
 .promo2-reasons-item-icon--support {
-  background-image: url('../images/dest/support.png');
+  background-image: url("../images/dest/support.png");
 }
 .promo2-reasons-item-icon--money {
-  background-image: url('../images/dest/maney.png');
+  background-image: url("../images/dest/maney.png");
 }
 .promo2-reasons-item-icon--format {
-  background-image: url('../images/dest/selfie.png');
+  background-image: url("../images/dest/selfie.png");
   background-position: right 10px top 25px;
 }
 .promo2-reasons-item-title {
@@ -236,6 +256,9 @@ body {
   @media screen and (max-width: $mobile-bp) {
     font-size: 34px;
   }
+  @media screen and (max-width: $mobile-s) {
+    font-size: 24px;
+  }
 }
 .promo2-reasons-item-text {
   color: $gray;
@@ -245,6 +268,9 @@ body {
   line-height: 1;
   @media screen and (max-width: $mobile-bp) {
     font-size: 34px;
+  }
+  @media screen and (max-width: $mobile-s) {
+    font-size: 24px;
   }
 }
 .promo2-help-block {
@@ -265,6 +291,9 @@ body {
   @media screen and (max-width: $mobile-bp) {
     font-size: 34px;
   }
+  @media screen and (max-width: $mobile-s) {
+    font-size: 24px;
+  }
 }
 .promo2-h4-help {
   text-align: center;
@@ -279,6 +308,9 @@ body {
   @media screen and (max-width: $mobile-bp) {
     font-size: 32px;
     margin: 0 0 28px 0;
+  }
+  @media screen and (max-width: $mobile-s) {
+    font-size: 22px;
   }
 }
 .promo2-help-item-row {
@@ -347,6 +379,9 @@ body {
   @media screen and (max-width: $mobile-bp) {
     height: 500px;
   }
+  @media screen and (max-width: $mobile-bp) {
+    height: 330px;
+  }
 }
 .promo2-help-item-text-title {
   position: relative;
@@ -359,7 +394,7 @@ body {
   padding-bottom: 26px;
   margin: 0 0 20px 0;
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     bottom: 0;
@@ -370,6 +405,9 @@ body {
   @media screen and (max-width: $mobile-bp) {
     font-size: 34px;
   }
+  @media screen and (max-width: $mobile-s) {
+    font-size: 24px;
+  }
 }
 .promo2-help-item-text {
   color: $white;
@@ -379,6 +417,9 @@ body {
   margin: 0;
   @media screen and (max-width: $mobile-bp) {
     font-size: 28px;
+  }
+  @media screen and (max-width: $mobile-s) {
+    font-size: 18px;
   }
 }
 .promo2-consultation-block {
@@ -449,6 +490,9 @@ body {
   @media screen and (max-width: $mobile-bp) {
     font-size: 30px;
   }
+  @media screen and (max-width: $mobile-s) {
+    font-size: 20px;
+  }
 }
 .promo2-work-bg-img {
   position: absolute;
@@ -464,8 +508,8 @@ body {
   background-color: $gray-light;
   @media screen and (max-width: $mobile-bp) {
     padding: 30px 0 48px 0;
-    background-image: url('../images/dest/buble1.png'),
-      url('../images/dest/buble1.png');
+    background-image: url("../images/dest/buble1.png"),
+      url("../images/dest/buble1.png");
     background-size: 170px, 170px;
     background-position: top -70px left -40px, bottom 5px right -70px;
     background-repeat: no-repeat;
@@ -505,6 +549,9 @@ body {
     max-width: 500px;
     font-size: 32px;
     margin-bottom: 40px;
+  }
+  @media screen and (max-width: $mobile-s) {
+    font-size: 22px;
   }
   &:last-child {
     margin-bottom: 0;
@@ -585,6 +632,9 @@ body {
   @media screen and (max-width: $mobile-bp) {
     font-size: 30px;
   }
+  @media screen and (max-width: $mobile-s) {
+    font-size: 20px;
+  }
 }
 .promo2-qa-spoiler-text {
   display: none;
@@ -595,6 +645,9 @@ body {
   margin: 0 0 20px 0;
   @media screen and (max-width: $mobile-bp) {
     font-size: 30px;
+  }
+  @media screen and (max-width: $mobile-s) {
+    font-size: 20px;
   }
 }
 
@@ -635,14 +688,17 @@ body {
   padding: 30px 65px 32px 85px;
   margin-bottom: 12px;
   background-repeat: no-repeat;
-  background-image: url('../images/dest/quotes1.png'),
-    url('../images/dest/quotes2.png');
+  background-image: url("../images/dest/quotes1.png"),
+    url("../images/dest/quotes2.png");
   background-position: top left 25px, bottom right 26px;
   @media screen and (max-width: $mobile-bp) {
     font-size: 30px;
     background-size: 20px auto, 20px auto;
     padding: 45px 55px 45px 55px;
     background-position: top left 26px, bottom right 28px;
+  }
+  @media screen and (max-width: $mobile-s) {
+    font-size: 20px;
   }
 }
 
@@ -660,6 +716,9 @@ body {
   @media screen and (max-width: $mobile-bp) {
     font-size: 30px;
     padding: 0 15px 0 25px;
+  }
+  @media screen and (max-width: $mobile-s) {
+    font-size: 20px;
   }
 }
 .promo2-comments-arrow {
@@ -697,14 +756,14 @@ body {
 }
 .promo2-comments-arrow--prev {
   left: 0;
-  background-image: url('../images/dest/arrow-prev.png');
+  background-image: url("../images/dest/arrow-prev.png");
   @media screen and (max-width: $mobile-bp) {
     left: 6px;
   }
 }
 .promo2-comments-arrow--next {
   right: 0;
-  background-image: url('../images/dest/arrow-next.png');
+  background-image: url("../images/dest/arrow-next.png");
   @media screen and (max-width: $mobile-bp) {
     right: 6px;
   }
