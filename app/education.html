@@ -126,16 +126,9 @@
 
       <div class="ed-block5">
         <div class="ed-block5-video-container">
-          <button class="ed-block5-video-btn" onclick="onPlayVideo(this)">
+          <a class="ed-block5-video-btn link-youtube" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
             <span>Воспроизвести видео</span>
-          </button>
-          <button class="ed-block5-video-pause" onclick="onPauseVideo(this)">
-            <span>Остановить видео</span>
-          </button>
-          <video class="ed-block5-video" preload="auto" loop="loop" muted="muted" playsinline="playsinline" poster="./images/dest/education/poster.png" id="educationVideo">
-            <source type="video/mp4" src="./images/dest/education/sample_video.mp4">
-            Your browser doesn't support HTML5 video tag.
-          </video>
+          </a>
         </div>
       </div>
 
@@ -284,7 +277,7 @@
           </div>
         </div>
 
-        <a href="#" class="ed-block7-btn">Оставить отзыв</a>
+        <button class="ed-block7-btn" onclick="onTogglePopup()">Оставить отзыв</button>
       </div>
 
       <div class="ed-block8">
@@ -622,20 +615,50 @@
         </div>
       </div>
 
+      <div class="education-comment-popup" id="commentPopup">
+        <div class="education-comment-popup-overlay" onclick="onTogglePopup()"></div>
+        <form action="" class="education-comment-form">
+          <button class="education-comment-close" type="button" onclick="onTogglePopup()">
+            <div class="visually-hidden">Закрыть попап</div>
+          </button>
+          <p class="education-comment-form-title">Отзыв</p>
+          <label class="ed-block11-input-wrapper">
+            <span class="visually-hidden">ФИО</span>
+            <input type="text" class="ed-input" placeholder="ФИО">
+          </label>
+          <label class="ed-block11-input-wrapper">
+            <select type="text" class="ed-input ed-input--seclect">
+              <span class="visually-hidden">ФИО технолога</span>
+              <option value="" disabled selected hidden>ФИО технолога</option>
+              <option value="option1">option1</option>
+              <option value="option2">option3</option>
+              <option value="option3">option3</option>
+            </select>
+          </label>
+          <label class="ed-block11-input-wrapper">
+            <span class="visually-hidden">E-mail</span>
+            <input type="text" class="ed-input"  placeholder="E-mail">
+          </label>
+          <label class="ed-block11-input-wrapper">
+            <span class="visually-hidden">Город</span>
+            <input type="text" class="ed-input"  placeholder="Москва">
+          </label>
+          <label class="ed-block11-input-wrapper">
+            <span class="visually-hidden">Название курса</span>
+            <input type="text" class="ed-input"  placeholder="Название курса">
+          </label>
+          <label class="ed-block11-input-wrapper">
+            <span class="visually-hidden">Напишите отзыв</span>
+            <textarea class="ed-input ed-input--textarea" placeholder="Напишите отзыв"></textarea>
+          </label>
+          <button class="ed-block7-btn" type="submit">Оставить отзыв</button>
+        </form>
+      </div>
+
     </div>
   </body>
   <script src="js/app.min.js"></script>
   <script>
-    function onPlayVideo(el) {
-      el.classList.add('hide');
-      document.querySelector('.ed-block5-video-pause').classList.add('show');
-      document.querySelector('#educationVideo').play();
-    }
-    function onPauseVideo(el) {
-      el.classList.remove('show');
-      document.querySelector('.ed-block5-video-btn').classList.remove('hide');
-      document.querySelector('#educationVideo').pause();
-    }
     $('#courseSlider').slick({
       slidesToShow: 3,
       slidesToScroll: 1,
@@ -693,5 +716,15 @@
         },
       ],
     });
+    $('.link-youtube').fancybox({
+        openEffect  : 'none',
+        closeEffect : 'none',
+        helpers : {
+            media : {}
+        }
+    });
+    function onTogglePopup() {
+      document.querySelector('#commentPopup').classList.toggle('show');
+    }
   </script>
 </html>

@@ -1,5 +1,14 @@
 // @import 'node_modules/swiper/swiper.scss';
-// @import 'node_modules/slick-carousel/slick/slick.scss';
+@import 'node_modules/slick-carousel/slick/slick.scss';
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
+}
+
+@import 'node_modules/@fancyapps/fancybox/dist/jquery.fancybox';
 
 // FONTS LOAD SECTION
 @mixin font($f-name, $f-style, $f-weight, $f-url) {
