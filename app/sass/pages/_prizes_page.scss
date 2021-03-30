@@ -21,11 +21,17 @@ body {
     margin: 0;
     box-sizing: border-box;
   }
+  .text-center {
+    text-align: center;
+  }
+  .text-up {
+    text-transform: uppercase;
+  }
   .prizes-h1 {
     font-size: 36px;
     font-weight: normal;
     text-align: center;
-    margin-bottom: 26px;
+    margin-bottom: 36px;
     text-transform: uppercase;
     strong {
       display: block;
@@ -86,6 +92,10 @@ body {
       background-color: $accent;
     }
   }
+  .prizes-h3--thin {
+    color: #424242;
+    font-weight: 300;
+  }
   .title-underline--white {
     &:before {
       background-color: #fff;
@@ -125,10 +135,42 @@ body {
       flex-basis: 100%;
     }
   }
+  .block1-col--left {
+    max-width: 46%;
+    flex-basis: 46%;
+    @media screen and (max-width: 1000px) {
+      max-width: 100%;
+      flex-basis: 100%;
+    }
+  }
+  .block1-col--right {
+    max-width: 54%;
+    flex-basis: 54%;
+    @media screen and (max-width: 1000px) {
+      max-width: 100%;
+      flex-basis: 100%;
+    }
+  }
   .row--prizes-block1 {
     @media screen and (max-width: 1000px) {
       flex-wrap: wrap;
     }
+  }
+  .prizes-block1-text {
+    color: #424242;
+  }
+  .prizes-block1-text-base {
+    font-size: 36px;
+    font-weight: 300;
+    b {
+      font-weight: normal;
+    }
+  }
+  .prizes-block1-text-title {
+    color: #592c82;
+    font-size: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
   }
   .prizes-block-text {
     display: flex;
@@ -162,12 +204,22 @@ body {
   }
   .prizes-block-img--block1 {
     height: 630px;
-    background-image: url('../images/dest/prize/DSC_8763.jpg');
+    background-image: url('../images/dest/prize/DSC_8802.jpg');
+    background-position: center;
+    @media screen and (max-width: 1660px) {
+      background-position: center right;
+    }
+    @media screen and (max-width: 1300px) {
+      background-position: center right -50px;
+    }
+    @media screen and (max-width: 1000px) {
+      background-position: center;
+    }
   }
   .prizes-block2 {
-    padding: 85px 0 72px;
+    padding: 155px 0 72px;
     @media screen and (max-width: 1000px) {
-      padding: 85px 0 0 0;
+      padding: 85px 0;
     }
   }
   .row--prizes-block2 {
@@ -204,6 +256,60 @@ body {
     padding-top: 80px;
     margin-top: -80px;
     margin-bottom: 25px;
+  }
+  .prizes-h2--prizes-winner {
+    margin-bottom: 70px;
+    &::before {
+      width: 560px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    @media screen and (max-width: 1000px) {
+      margin-top: 40px;
+    }
+  }
+  .prize-winner-block {
+    .block-text {
+      max-width: 768px;
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 30px;
+      @media screen and (max-width: 1000px) {
+        font-size: 34px;
+      }
+    }
+  }
+  .prize-winner-col {
+    max-width: 50%;
+    flex-basis: 50%;
+    @media screen and (max-width: 1000px) {
+      max-width: 100%;
+      flex-basis: 100%;
+    }
+  }
+  .row--wrap {
+    flex-wrap: wrap;
+  }
+  .prize-winner-col--img {
+    display: flex;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url('../images/dest/prize/DSC_8709.jpg');
+    img {
+      display: block;
+      width: 100%;
+    }
+    @media screen and (max-width: 1000px) {
+      padding-top: 50%;
+    }
+  }
+  .prize-winner-col--text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
   }
   .prizes-block3 {
     padding: 50px 90px 30px 90px;
@@ -386,14 +492,15 @@ body {
     margin-bottom: 10px;
   }
   .btn--block3-item {
+    @extend .btn;
     display: block;
     margin: 0 auto;
-    @extend .btn;
     color: $purple;
     font-size: 24px;
     font-weight: bold;
     text-transform: uppercase;
-    padding: 12px 25px 10px 25px;
+    padding: 14px 35px 12px 35px;
+    text-decoration: none;
     &:hover {
       background-color: $accent;
       color: #fff;
@@ -508,5 +615,51 @@ body {
     font-size: 30px;
     color: #fff;
     height: 100px;
+  }
+  .prize-img-block {
+    @media screen and (max-width: 1000px) {
+      display: none;
+    }
+  }
+  .row--prize-img-block {
+    justify-content: center;
+    align-items: center;
+    img {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+  .prize-img-col-1 {
+    flex-basis: 48%;
+    max-width: 48%;
+    @media screen and (max-width: 1000px) {
+      flex-basis: 100%;
+      max-width: 100%;
+    }
+  }
+  .prize-img-col-2 {
+    flex-basis: 30%;
+    max-width: 30%;
+  }
+  .prize-img-col-3 {
+    flex-basis: 22%;
+    max-width: 22%;
+  }
+  .prize-img-col-2 {
+    img {
+      transform: translateY(-90px);
+      @media screen and (max-width: 1200px) {
+        transform: translateY(-10px);
+      }
+    }
+  }
+  .prize-img-col-3 {
+    img {
+      transform: translateY(113px);
+      @media screen and (max-width: 1200px) {
+        transform: translateY(135px);
+      }
+    }
   }
 }
