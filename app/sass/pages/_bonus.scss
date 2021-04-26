@@ -7,6 +7,8 @@ $text-second: #111;
 
 // BP
 $mobile-bp: 1000px;
+$mobile-small: 750px;
+
 body {
   margin: 0;
 }
@@ -15,7 +17,7 @@ body {
   color: $base-text;
   font-weight: normal;
   line-height: 1.3;
-  min-width: 750px;
+  min-width: 320px;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
   .text-center {
@@ -66,7 +68,7 @@ body {
   .h2-bonus--underline {
     position: relative;
     &::after {
-      content: '';
+      content: "";
       display: block;
       position: absolute;
       bottom: 0;
@@ -87,7 +89,7 @@ body {
     color: $accent;
   }
   .bonus-block1 {
-    background-image: url('../images/dest/bonus/bg1.png');
+    background-image: url("../images/dest/bonus/bg1.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -100,6 +102,12 @@ body {
     justify-content: flex-end;
     @media screen and (max-width: $mobile-bp) {
       height: 440px;
+    }
+    @media screen and (max-width: $mobile-small) {
+      justify-content: center;
+      height: auto;
+      min-height: 440px;
+      padding-bottom: 20px;
     }
   }
   .bonus-block1-img {
@@ -114,6 +122,9 @@ body {
       left: -104px;
       bottom: 30px;
       width: 400px;
+    }
+    @media screen and (max-width: $mobile-small) {
+      display: none;
     }
   }
   .bonus-block1-text-inner {
@@ -160,6 +171,9 @@ body {
   }
   .bonus-block2-h2 {
     margin-bottom: 140px;
+    @media screen and (max-width: $mobile-bp) {
+      margin-bottom: 120px;
+    }
   }
   .bonus-block2-container {
     max-width: 740px;
@@ -171,6 +185,9 @@ body {
       // align-items: center;
       flex-wrap: wrap;
     }
+    @media screen and (max-width: $mobile-small) {
+      padding-right: 50px;
+    }
   }
   .bonus-block2-item-col {
     @media screen and (max-width: $mobile-bp) {
@@ -178,6 +195,10 @@ body {
       flex-basis: 50%;
       display: flex;
       justify-content: center;
+    }
+    @media screen and (max-width: $mobile-small) {
+      max-width: 100%;
+      flex-basis: 100%;
     }
   }
   .bonus-block2-item {
@@ -218,7 +239,7 @@ body {
     background-color: $pink;
     border-radius: 50%;
     &::after {
-      content: '';
+      content: "";
       display: block;
       position: absolute;
       background-repeat: no-repeat;
@@ -227,7 +248,7 @@ body {
   }
   .bonus-block2-item-icon--1 {
     &::after {
-      background-image: url('../images/dest/bonus/feature1.png');
+      background-image: url("../images/dest/bonus/feature1.png");
       width: 70px;
       height: 82px;
       top: -50px;
@@ -236,7 +257,7 @@ body {
   }
   .bonus-block2-item-icon--2 {
     &::after {
-      background-image: url('../images/dest/bonus/feature2.png');
+      background-image: url("../images/dest/bonus/feature2.png");
       width: 92px;
       height: 68px;
       top: -33px;
@@ -245,7 +266,7 @@ body {
   }
   .bonus-block2-item-icon--3 {
     &::after {
-      background-image: url('../images/dest/bonus/feature3.png');
+      background-image: url("../images/dest/bonus/feature3.png");
       width: 84px;
       height: 95px;
       top: -61px;
@@ -254,7 +275,7 @@ body {
   }
   .bonus-block2-item-icon--4 {
     &::after {
-      background-image: url('../images/dest/bonus/feature4.png');
+      background-image: url("../images/dest/bonus/feature4.png");
       width: 85px;
       height: 82px;
       top: -43px;
@@ -275,7 +296,7 @@ body {
     }
     &::after,
     &::before {
-      content: '';
+      content: "";
       display: block;
       position: absolute;
       top: 0;
@@ -310,6 +331,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    @media screen and (max-width: $mobile-small) {
+      align-items: center;
+    }
   }
   .bonus-block3-img {
     display: block;
@@ -319,6 +343,9 @@ body {
     @media screen and (max-width: $mobile-bp) {
       right: -230px;
       bottom: -60px;
+    }
+    @media screen and (max-width: $mobile-small) {
+      display: none;
     }
   }
   .bonus-block3-item {
@@ -332,16 +359,25 @@ body {
   .bonus-block3-item--1 {
     margin-right: 220px;
     padding-top: 60px;
+    @media screen and (max-width: $mobile-small) {
+      margin-right: 0;
+    }
   }
   .bonus-block3-item--2 {
     margin-right: 440px;
     @media screen and (max-width: $mobile-bp) {
       margin-right: 340px;
     }
+    @media screen and (max-width: $mobile-small) {
+      margin-right: 0;
+    }
   }
   .bonus-block3-item--3 {
     align-self: flex-start;
     padding-top: 10px;
+    @media screen and (max-width: $mobile-small) {
+      align-self: auto;
+    }
   }
   .bonus-block3-item-text {
     font-size: 16px;
@@ -351,9 +387,12 @@ body {
     position: relative;
     border-radius: 50%;
     background-repeat: no-repeat;
-    background-image: url('../images/dest/bonus/maney.png');
+    background-image: url("../images/dest/bonus/maney.png");
     background-position: center;
     margin-right: 18px;
+    @media screen and (max-width: $mobile-small) {
+      flex: 0 0 auto;
+    }
   }
   .bonus-block3-circle--1 {
     background-color: $pink;
@@ -422,6 +461,10 @@ body {
     display: flex;
     align-items: center;
     z-index: 2;
+    @media screen and (max-width: $mobile-small) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
   .bonus-block4-item--1 {
     margin-left: 145px;
@@ -438,6 +481,9 @@ body {
   .bonus-block4-item-img {
     display: block;
     margin-right: 22px;
+    @media screen and (max-width: $mobile-small) {
+      margin-bottom: 20px;
+    }
   }
   .bonus-block4-item-text {
     font-size: 16px;
@@ -447,9 +493,7 @@ body {
     align-self: flex-end;
     @media screen and (max-width: $mobile-bp) {
       align-self: center;
-      @media screen and (max-width: $mobile-bp) {
-        margin: 40px 0;
-      }
+      margin: 40px 0;
     }
   }
   .bonus-block4-table-col {
@@ -461,12 +505,19 @@ body {
     @media screen and (max-width: $mobile-bp) {
       padding: 0 20px;
     }
+    @media screen and (max-width: $mobile-small) {
+      font-size: 40px;
+      padding: 0 10px;
+    }
   }
   .bonus-block4-table-col--border {
     border-right: solid 2px $accent;
   }
   .bonus-block4-table-big {
     font-size: 100px;
+    @media screen and (max-width: $mobile-small) {
+      font-size: 60px;
+    }
   }
   .bonus-block4-table-col--center {
     justify-content: center;
@@ -487,12 +538,15 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-image: url('../images/dest/bonus/bg5.png');
+    background-image: url("../images/dest/bonus/bg5.png");
   }
   .bonus-block5-img {
     display: block;
     margin-left: 90px;
     margin-bottom: 15px;
+    @media screen and (max-width: $mobile-small) {
+      margin-left: 60px;
+    }
   }
   .bonus-block5-h2 {
     display: inline-block;
@@ -508,19 +562,25 @@ body {
     font-weight: bold;
     margin-left: 50px;
     line-height: 1;
+    @media screen and (max-width: $mobile-small) {
+      margin-left: 20px;
+    }
   }
   .bonus-block5-subtext {
     display: table;
     text-transform: uppercase;
     margin-left: 216px;
     margin-bottom: 34px;
+    @media screen and (max-width: $mobile-small) {
+      margin-left: 150px;
+    }
   }
   .bonus-block6 {
     padding: 65px 0 90px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-image: url('../images/dest/bonus/bg6.png');
+    background-image: url("../images/dest/bonus/bg6.png");
   }
   .bonus-block6-h2 {
     margin-bottom: 50px;
@@ -537,7 +597,7 @@ body {
     position: relative;
     padding-bottom: 30px;
     &::after {
-      content: '';
+      content: "";
       display: block;
       position: absolute;
       bottom: 0;
