@@ -1,6 +1,6 @@
 button,
 .btn,
-input[type='submit'] {
+input[type="submit"] {
   display: inline-block;
   background-color: transparent;
   border-style: none;
@@ -12,6 +12,7 @@ input[type='submit'] {
   white-space: nowrap;
   text-align: center;
   padding: 0;
+  text-decoration: none;
   &:focus {
     outline: none;
   }
