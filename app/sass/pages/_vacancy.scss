@@ -120,7 +120,8 @@ body {
     padding: 62px 0 230px 0;
     background-repeat: no-repeat;
     background-position: center top;
-    background-image: url("../images/dest/vacancy/bg--2.jpg");
+    background-image: url("../images/dest/vacancy/bg-main.jpg");
+    background-size: 1920px;
     background-color: #f5f0f7;
   }
   .btn--vacancy-main {
@@ -207,17 +208,22 @@ body {
   .vacancy-feature {
     background-repeat: no-repeat;
     background-image: url("../images/dest/vacancy/bg--1.jpg");
-    background-position: top right;
+    background-position: top right -100px;
     background-size: cover;
+    background-color: #fff;
     padding: 175px 0 20px 0;
     clip-path: polygon(0 22%, 100% 0, 100% 100%, 0 100%);
     margin-top: -260px;
+    @media screen and (max-width: 1600px) {
+      background-position: top right -250px;
+    }
     @media screen and (max-width: 1400px) {
       clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
       margin-top: -190px;
     }
     @media screen and (max-width: $mobile-bp) {
       clip-path: polygon(0 12%, 100% 0, 100% 100%, 0 100%);
+      background-image: none;
     }
   }
   .vacancy-feature-item {
@@ -346,6 +352,9 @@ body {
   }
   .vacancy-history-item-inner--1 {
     max-width: 675px;
+    @media screen and (max-width: $mobile-bp) {
+      max-width: 500px;
+    }
   }
   .vacancy-history-timelane-wrapper {
     position: relative;
@@ -581,7 +590,7 @@ body {
     color: $second;
     text-align: center;
     @media screen and (max-width: $mobile-bp) {
-      left: 58%;
+      left: 57%;
     }
     a {
       text-decoration: underline;
@@ -732,6 +741,9 @@ body {
     background-position: center;
     background-size: cover;
     background-image: url("../images/dest/vacancy/bg5.png");
+    @media screen and (max-width: $mobile-bp) {
+      background-position: center left -140px;
+    }
   }
   .row--vacancy-bottom {
     display: flex;
