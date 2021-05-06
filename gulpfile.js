@@ -49,7 +49,7 @@ function scripts() {
     // 'node_modules/masonry-layout/dist/masonry.pkgd.js',
     // 'node_modules/imagesloaded/imagesloaded.pkgd.js',
     // 'node_modules/swiper/swiper-bundle.js',
-    // 'node_modules/jquery.maskedinput/src/jquery.maskedinput.js',
+    "node_modules/jquery.maskedinput/src/jquery.maskedinput.js",
     "app/js/app.js", // app.js. Always at the end
   ])
     .pipe(concat("app.min.js"))

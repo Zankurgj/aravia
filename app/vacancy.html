@@ -30,7 +30,8 @@
                                 себя
                                 сегодня, завтра и каждый день
                             </p>
-                            <a href="#" class="btn btn--vacancy btn--vacancy-main">Хочу в команду ARAVIA</a>
+                            <button class="btn btn--vacancy btn--vacancy-main" onclick="onToggleFormPopup()">Хочу в
+                                команду ARAVIA</button>
                         </div>
                     </div>
                 </div>
@@ -382,6 +383,77 @@
                 </div>
             </div>
         </section>
+        <section class="vacancy-form-popup-wrapper js--vacancy-form-popup">
+            <div class="vacancy-form-popup-overlay" onclick="onToggleFormPopup()"></div>
+            <div class="vacancy-form-popup-inner">
+                <button class="vacancy-form-popup-btn-close" onclick="onToggleFormPopup()">
+                    <span class="visually-hidden">закрыть</span>
+                    <img class="vacancy-form-close-icon" src="./images/dest/vacancy/icon-close.svg" aria-hidden="true">
+                </button>
+                <form class="vacancy-form-popup">
+                    <p class="vacancy-form-popup-title">Анкета</p>
+                    <p class="vacancy-form-popup-subtitle">Заполните анкету и мы обязательно с вами свяжемся!</p>
+                    <div class="vacancy-form-popup-col-main">
+                        <label class="vacancy-form-input-wrapper">
+                            <span class="vacancy-form-input-title">Имя Фамилия</span>
+                            <input type="text" class="vacancy-form-input">
+                        </label>
+                    </div>
+                    <div class="vacancy-form-popup-col-main">
+                        <label class="vacancy-form-input-wrapper vacancy-form-input-wrapper--calendar">
+                            <span class="vacancy-form-input-title">Дата рождения:</span>
+                            <input type="text" inputmode="numeric" class="vacancy-form-input" id="date">
+                            <img class="vacancy-calendar-icon" src="./images/dest/vacancy/calendar.svg"
+                                aria-hidden="true">
+                        </label>
+                    </div>
+                    <div class="vacancy-form-popup-col-main">
+                        <label class="vacancy-form-input-wrapper">
+                            <span class="vacancy-form-input-title">Город</span>
+                            <input type="text" class="vacancy-form-input">
+                        </label>
+                    </div>
+                    <div class="vacancy-form-popup-col-main">
+                        <div class="row row--vacancy-form">
+                            <div class="vacancy-form-col--2">
+                                <label class="vacancy-form-input-wrapper">
+                                    <span class="vacancy-form-input-title">Телефон:</span>
+                                    <input inputmode="numeric" type="text" class="vacancy-form-input" id="phone">
+                                </label>
+                            </div>
+                            <div class="vacancy-form-col--2">
+                                <label class="vacancy-form-input-wrapper">
+                                    <span class="vacancy-form-input-title">E-mail:</span>
+                                    <input type="text" class="vacancy-form-input">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vacancy-form-popup-col-main">
+                        <label class="vacancy-form-input-wrapper">
+                            <span class="vacancy-form-input-title">Желаемая должность:</span>
+                            <input type="text" class="vacancy-form-input">
+                        </label>
+                    </div>
+                    <div class="vacancy-form-popup-col-main">
+                        <div class="row row--vacancy-form-file">
+                            <div class="vacancy-form-col-file">
+                                <div class="vacancy-form-input-wrapper">
+                                    <span class="vacancy-form-input-title">Желаемая должность:</span>
+                                    <label class="vacancy-form-file-label">
+                                        <input type="file" class="vacancy-form-file-input">
+                                        <img class="vacancy-file-icon" src="./images/dest/vacancy/attach.svg"
+                                            aria-hidden="true">
+                                        <span class="vacancy-form-file-text">загрузить файл</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <button class="vacancy-form-button" type="submit">Отправить </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
     </div>
     <script src="js/app.min.js"></script>
     <script>
@@ -395,6 +467,11 @@
             const activeTab = document.querySelector('.js--history-tab.show');
             activeTab.classList.remove('show');
             document.getElementById(id).classList.add('show');
+        }
+        $("#phone").mask("(999) 999-9999");
+        $("#date").mask("99/99/9999");
+        function onToggleFormPopup() {
+            document.querySelector('.js--vacancy-form-popup').classList.toggle('show')
         }
     </script>
 </body>
