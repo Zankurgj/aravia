@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Aravia</title>
+    <meta name="description" content="Amourrr" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- <link rel="icon" href="img/favicon.png" /> -->
+    <meta property="og:image" content="img/dest/preview.jpg" />
+    <link rel="stylesheet" href="css/app.min.css" />
+</head>
+
+<body>
+    <div class="vacancy-page vacancy-page--1">
+        <div class="vacancy-page--1-top">
+            <main class="vacancy-main--1">
+                <div class="container-vacancy--1">
+                    <div class="row row--vacancy-main">
+                        <div class="vacancy-main-inner">
+                            <p class="vacancy-tag-text">
+                                <span class="vacancy-tag-text-circle"></span>
+                                #AraviaTeam
+                            </p>
+                            <p class="vacancy-main-title">актуальные</p>
+                            <div class="vacancy-main-text-wrapper">
+                                <p class="vacancy-main-subtitle">Вакансии</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <section class="vacancy-spoiler-section">
+                <div class="container-vacancy--1">
+                    <div class="vacancy-spoiler">
+                        <button class="vacancy-spoiler-btn js--vacancy-spoiler-btn">отдел технологического
+                            сервиса</button>
+                        <div class="vacancy-spoiler-inner js--vacancy-spoiler-inner">
+                            <div class="vacancy-spoiler-item">
+                                <p class="vacancy-spoiler-title">технолог-преподаватель г. москва</p>
+                                <a href="#" class="vacancy-spoiler-link">подробнее</a>
+                            </div>
+                            <div class="vacancy-spoiler-item">
+                                <p class="vacancy-spoiler-title">технолог-преподаватель г. санкт-петербург</p>
+                                <a href="#" class="vacancy-spoiler-link">подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vacancy-spoiler">
+                        <button class="vacancy-spoiler-btn js--vacancy-spoiler-btn">отдел клиентского сервиса</button>
+                        <div class="vacancy-spoiler-inner js--vacancy-spoiler-inner">
+                            <div class="vacancy-spoiler-item">
+                                <p class="vacancy-spoiler-title">Менеджер клиентского сервиса</p>
+                                <a href="#" class="vacancy-spoiler-link">подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vacancy-spoiler">
+                        <button class="vacancy-spoiler-btn js--vacancy-spoiler-btn">отдел продаж</button>
+                        <div class="vacancy-spoiler-inner js--vacancy-spoiler-inner">
+                            <div class="vacancy-spoiler-item">
+                                <p class="vacancy-spoiler-title">Менеджер по продажам г. Москва </p>
+                                <a href="#" class="vacancy-spoiler-link">подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vacancy-spoiler">
+                        <button class="vacancy-spoiler-btn js--vacancy-spoiler-btn">отдел маркетинговых
+                            коммуникаций</button>
+                        <div class="vacancy-spoiler-inner js--vacancy-spoiler-inner">
+                            <div class="vacancy-spoiler-item">
+                                <p class="vacancy-spoiler-title">SMM – менеджер</p>
+                                <a href="#" class="vacancy-spoiler-link">подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn--vacancy btn--vacancy-main--2" onclick="onToggleFormPopup()">Хочу в команду
+                    ARAVIA</button>
+            </section>
+        </div>
+        <section class="vacancy-bottom">
+            <h2 class="base-title base-title--vacancy-bottom">
+                <b>Контакты</b>
+                <span class="base-title-underline base-title-underline--end"></span>
+            </h2>
+            <div class="container-vacancy--1 container-vacancy--1--bottom">
+                <div class="row row--vacancy-bottom">
+                    <div class="vacancy-bottom-email">
+                        <div class="vacancy-bottom-email-icon">
+                            <img src="./images/dest/vacancy/email.svg" alt="Иконка емейл">
+                        </div>
+                        <a href="#" class="vacancy-bottom-email-link"
+                            href="mailto:team@aravia-prof.ru">team@aravia-prof.ru</a>
+                    </div>
+                    <div class="vacancy-bottom-social">
+
+                        <a href="#" class="vacancy-bottom-social-item vacancy-bottom-social-item--fb" target="_blank">
+                            <span class="visually-hidden">фейсбук</span>
+                        </a>
+                        <a href="#" class="vacancy-bottom-social-item vacancy-bottom-social-item--vk" target="_blank">
+                            <span class="visually-hidden">Вконтакте</span>
+                        </a>
+                        <a href="#" class="vacancy-bottom-social-item vacancy-bottom-social-item--inst" target="_blank">
+                            <span class="visually-hidden">Инстаграм</span>
+                        </a>
+                        <a href="#" class="vacancy-bottom-social-item vacancy-bottom-social-item--ok" target="_blank">
+                            <span class="visually-hidden">Одноклассники</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="vacancy-form-popup-wrapper js--vacancy-form-popup">
+            <div class="vacancy-form-popup-overlay" onclick="onToggleFormPopup()"></div>
+            <div class="vacancy-form-popup-inner">
+                <button class="vacancy-form-popup-btn-close" onclick="onToggleFormPopup()">
+                    <span class="visually-hidden">закрыть</span>
+                    <img class="vacancy-form-close-icon" src="./images/dest/vacancy/icon-close.svg" aria-hidden="true">
+                </button>
+                <form class="vacancy-form-popup">
+                    <p class="vacancy-form-popup-title">Анкета</p>
+                    <p class="vacancy-form-popup-subtitle">Заполните анкету и мы обязательно с вами свяжемся!</p>
+                    <div class="vacancy-form-popup-col-main">
+                        <label class="vacancy-form-input-wrapper">
+                            <span class="vacancy-form-input-title">Имя Фамилия</span>
+                            <input type="text" class="vacancy-form-input">
+                        </label>
+                    </div>
+                    <div class="vacancy-form-popup-col-main">
+                        <label class="vacancy-form-input-wrapper vacancy-form-input-wrapper--calendar">
+                            <span class="vacancy-form-input-title">Дата рождения:</span>
+                            <input type="text" inputmode="numeric" class="vacancy-form-input" id="date">
+                            <img class="vacancy-calendar-icon" src="./images/dest/vacancy/calendar.svg"
+                                aria-hidden="true">
+                        </label>
+                    </div>
+                    <div class="vacancy-form-popup-col-main">
+                        <label class="vacancy-form-input-wrapper">
+                            <span class="vacancy-form-input-title">Город</span>
+                            <input type="text" class="vacancy-form-input">
+                        </label>
+                    </div>
+                    <div class="vacancy-form-popup-col-main">
+                        <div class="row row--vacancy-form">
+                            <div class="vacancy-form-col--2">
+                                <label class="vacancy-form-input-wrapper">
+                                    <span class="vacancy-form-input-title">Телефон:</span>
+                                    <input inputmode="numeric" type="text" class="vacancy-form-input" id="phone">
+                                </label>
+                            </div>
+                            <div class="vacancy-form-col--2">
+                                <label class="vacancy-form-input-wrapper">
+                                    <span class="vacancy-form-input-title">E-mail:</span>
+                                    <input type="text" class="vacancy-form-input">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vacancy-form-popup-col-main">
+                        <label class="vacancy-form-input-wrapper">
+                            <span class="vacancy-form-input-title">Желаемая должность:</span>
+                            <input type="text" class="vacancy-form-input">
+                        </label>
+                    </div>
+                    <div class="vacancy-form-popup-col-main">
+                        <div class="row row--vacancy-form-file">
+                            <div class="vacancy-form-col-file">
+                                <div class="vacancy-form-input-wrapper">
+                                    <span class="vacancy-form-input-title">Ваше резюме:</span>
+                                    <label class="vacancy-form-file-label">
+                                        <input type="file" class="vacancy-form-file-input">
+                                        <img class="vacancy-file-icon" src="./images/dest/vacancy/attach.svg"
+                                            aria-hidden="true">
+                                        <span class="vacancy-form-file-text">загрузить файл</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <button class="vacancy-form-button" type="submit">Отправить </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+    <script src="js/app.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            $('.js--vacancy-spoiler-btn').on('click', function (event) {
+                $(this).toggleClass('opened');
+                $(this).siblings('.js--vacancy-spoiler-inner').slideToggle(200);
+            });
+            function onChangeHistoryTab(id) {
+                const activeTab = document.querySelector('.js--history-tab.show');
+                activeTab.classList.remove('show');
+                document.getElementById(id).classList.add('show');
+            }
+            $("#phone").mask("(999) 999-9999");
+            $("#date").mask("99/99/9999");
+        });
+        function onToggleFormPopup() {
+            document.querySelector('.js--vacancy-form-popup').classList.toggle('show')
+        }
+    </script>
+</body>
+
+</html>

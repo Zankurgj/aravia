@@ -25,6 +25,9 @@ body {
   .text-center {
     text-align: center;
   }
+  .text-right {
+    text-align: right;
+  }
   * {
     margin: 0;
     box-sizing: border-box;
@@ -105,6 +108,24 @@ body {
       padding: 0 30px;
     }
   }
+  .container-vacancy--1 {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 60px;
+    @media screen and (max-width: $mobile-bp) {
+      padding: 0 30px;
+    }
+  }
+  .container-vacancy--2 {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 60px;
+    @media screen and (max-width: $mobile-bp) {
+      padding: 0 30px;
+    }
+  }
   .vacancy-text-base {
     font-size: 24px;
     color: $base-text;
@@ -114,6 +135,8 @@ body {
     font-size: 24px;
     color: #fff;
     background-color: $accent;
+    border-radius: 6px;
+    padding: 12px 10px;
   }
 
   .vacancy-main {
@@ -127,8 +150,6 @@ body {
   .btn--vacancy-main {
     max-width: 295px;
     width: 100%;
-    padding: 12px 10px;
-    border-radius: 6px;
     margin-top: 54px;
     margin-left: auto;
   }
@@ -151,6 +172,7 @@ body {
     color: $second;
     font-weight: 300;
     line-height: 1;
+    text-transform: uppercase;
   }
   .vacancy-main-subtitle {
     color: $accent;
@@ -158,6 +180,7 @@ body {
     font-weight: bold;
     line-height: 1.1;
     margin-bottom: 12px;
+    text-transform: uppercase;
   }
   .vacancy-tag-text {
     align-self: flex-end;
@@ -966,5 +989,179 @@ body {
     &:hover {
       opacity: 0.8;
     }
+  }
+  .vacancy-spoiler {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  .vacancy-spoiler-btn {
+    display: block;
+    position: relative;
+    padding-right: 46px;
+    color: $second;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 1;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 30px;
+    transition: opacity $base-duration $base-timing;
+    &:hover {
+      opacity: 0.8;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 5px;
+      width: 30px;
+      height: 15px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-image: url("../images/dest/vacancy/right-arrow.png");
+      transition: transform $base-duration $base-timing;
+    }
+    &.opened {
+      &::before {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  .vacancy-spoiler-inner {
+    width: 100%;
+    padding: 30px 35px 25px 35px;
+    background-color: rgba($color: #fff, $alpha: 0.6);
+    display: none;
+  }
+  .vacancy-spoiler-item {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .vacancy-spoiler-title {
+    color: $accent;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 24px;
+  }
+  .vacancy-spoiler-link {
+    color: #272727;
+    font-size: 24px;
+    line-height: 1;
+    font-weight: 300;
+    text-decoration: underline;
+    transition: opacity $base-duration $base-timing;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  .vacancy-main--1 {
+    padding: 62px 0 90px 0;
+  }
+  .vacancy-spoiler-section {
+    padding: 0 0 115px 0;
+  }
+  .vacancy-page--1-top {
+    background-repeat: no-repeat;
+    background-position: center top -62px;
+    background-image: url("../images/dest/vacancy/bg-2-1.png");
+    background-color: #f3f0f6;
+  }
+  .btn--vacancy-main--2 {
+    display: block;
+    margin: 60px auto 0 auto;
+  }
+  .row--vacancy-main--2 {
+    position: relative;
+    padding: 64px 0 125px 279px;
+    z-index: 2;
+    @media screen and (max-width: 1100px) {
+      flex-direction: column-reverse;
+      padding: 64px 0 125px 0;
+      align-items: center;
+    }
+  }
+  .vacancy-main--2 {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      clip-path: polygon(0 0, 100% 0, 100% 86%, 0% 100%);
+      background-color: #f3f0f6;
+      z-index: 1;
+    }
+  }
+  .vacancy-main-command-img {
+    position: absolute;
+    bottom: -60px;
+    left: -350px;
+    @media screen and (max-width: 1400px) {
+      bottom: -10px;
+      left: -200px;
+    }
+    @media screen and (max-width: 1100px) {
+      margin: 50px 0 -75px 0;
+      position: static;
+    }
+    img {
+      display: block;
+      width: 628px;
+      height: auto;
+      @media screen and (max-width: 1400px) {
+        width: 510px;
+      }
+    }
+  }
+  .vacancy-description {
+    padding: 100px 0 75px;
+  }
+  .vacancy-description-title {
+    color: $accent;
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  .vacancy-description-list {
+    padding: 0;
+    color: $base-text;
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: 300;
+    list-style: none;
+    li {
+      padding-left: 40px;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 8px;
+        width: 10px;
+        height: 10px;
+        background-color: $second;
+        border-radius: 50%;
+      }
+    }
+  }
+  .vacancy-description-item {
+    margin-bottom: 50px;
+  }
+  .vacancy-main-title--2 {
+    margin-bottom: 10px;
   }
 }
