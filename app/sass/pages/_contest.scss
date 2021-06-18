@@ -80,18 +80,18 @@ body {
     height: 594px;
     background-repeat: no-repeat;
     background-position: center center;
-    background-image: url('../images/dest/contest/bg1_f2.jpg');
+    background-image: url("../images/dest/contest/bg1_f2.jpg");
     background-color: #edecf1;
     @media screen and (max-width: $mobile-bp) {
       background-position: center left -590px;
-      background-image: url('../images/dest/contest/bg1_m.png');
+      background-image: url("../images/dest/contest/bg1_m.png");
     }
   }
   .contest-block1-text {
     font-size: 28px;
     font-weight: 300;
     text-transform: uppercase;
-    margin-bottom: 40px;
+    margin-bottom: 25px;
   }
   .container--block1 {
     display: flex;
@@ -109,12 +109,12 @@ body {
     }
   }
   .contest-block1-text-inner {
-    padding-top: 53px;
+    padding-top: 200px;
     position: relative;
     z-index: 3;
-    @media screen and (max-width: 1840px) {
-      padding-top: 23px;
-    }
+    // @media screen and (max-width: 1840px) {
+    //   padding-top: 23px;
+    // }
   }
   .h1-contest-block1 {
     margin-bottom: 35px;
@@ -132,10 +132,9 @@ body {
   }
   .contest-block2 {
     position: relative;
-    height: 563px;
     background-repeat: no-repeat;
-    background-position: top right;
-    background-image: url('../images/dest/contest/bg2.png');
+    background-position: bottom right;
+    background-image: url("../images/dest/contest/bg2.png");
     background-color: #fff;
     @media screen and (max-width: 1840px) {
       background-position: top right -180px;
@@ -154,6 +153,58 @@ body {
     font-size: 24px;
     margin-bottom: 25px;
   }
+  .contest-block2-item-wrapper {
+    display: flex;
+    padding-bottom: 80px;
+  }
+  .contest-block2-item {
+    position: relative;
+    margin-right: 100px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  .contest-block2-item-img {
+    margin: 0 auto 10px auto;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: $second;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .contest-block2-item-img--1 {
+    background-image: url("../images/dest/contest/facial-treatment.png");
+  }
+  .contest-block2-item-img--2 {
+    background-image: url("../images/dest/contest/group.png");
+  }
+  .contest-block2-item-img--3 {
+    background-image: url("../images/dest/contest/selfies_icon.png");
+  }
+  .contest-block2-item-number {
+    position: absolute;
+    top: -40px;
+    color: #d0c2ff;
+    font-weight: 900;
+    font-size: 88px;
+    line-height: 1;
+  }
+  .contest-block2-item-number--1 {
+    left: 0;
+  }
+  .contest-block2-item-number--2 {
+    left: -34px;
+  }
+  .contest-block2-item-number--3 {
+    left: -102px;
+  }
+  .contest-block2-item-text {
+    text-align: center;
+    font-size: 24px;
+    color: #2b2b2b;
+  }
+
   .container-contest--contest-block2 {
     max-width: 1160px;
     width: 100%;
@@ -162,8 +213,9 @@ body {
   }
   .contest-block2-inner {
     text-align: right;
-    padding: 160px 0 0 0;
+    padding: 90px 0 0 0;
     max-width: 520px;
+    margin-bottom: 90px;
     @media screen and (max-width: $mobile-bp) {
       text-align: left;
       max-width: 420px;
@@ -178,10 +230,71 @@ body {
     height: 75px;
     background-repeat: no-repeat;
     background-position: center;
-    background-image: url('../images/dest/contest/down-arrow.png');
+    background-image: url("../images/dest/contest/down-arrow.png");
     &:hover {
       opacity: 0.8;
     }
+  }
+  .contest-work {
+    padding: 0 0 90px 0;
+  }
+  .container-contest--work {
+    max-width: 1140px;
+    padding: 0;
+  }
+  .contest-work-slider-wrapper {
+    position: relative;
+    padding: 0 85px;
+  }
+  .contest-work-slide {
+    display: flex;
+  }
+  .contest-work-slide-col {
+    max-width: 50%;
+    flex-basis: 50%;
+    padding: 0 5px;
+  }
+  .contest-compare-slider {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+  .contest-compare-slider-name {
+    text-align: center;
+    color: #272727;
+    font-size: 24px;
+    font-weight: 300;
+  }
+  .contest-compare-reveal {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: -2px;
+      width: 4px;
+      height: 100%;
+      background-color: #fff;
+    }
+  }
+  .contest-compare-slider-before-img {
+    width: 100%;
+  }
+  .contest-work-slider-arrow {
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 54px;
+    transform: translateY(-50%);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+  .contest-work-slider-arrow--prev {
+    left: 0;
+    background-image: url("../images/dest/contest/left-arrow.png");
+  }
+  .contest-work-slider-arrow--next {
+    right: 0;
+    background-image: url("../images/dest/contest/right-arrow.png");
   }
   .contest-block3 {
     background-color: #edecf1;
@@ -189,7 +302,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-image: url('../images/dest/contest/bg2_2.png');
+    background-image: url("../images/dest/contest/bg2_2.png");
   }
   .h2-contest--contest-block3 {
     margin-bottom: 20px;
@@ -241,7 +354,7 @@ body {
       position: relative;
       padding-left: 16px;
       &::after {
-        content: '';
+        content: "";
         position: absolute;
         top: 8px;
         left: 0;
@@ -301,12 +414,18 @@ body {
     display: block;
   }
   .contest-block5-decorate-img--1 {
-    right: -206px;
-    top: 380px;
+    right: -106px;
+    top: 700px;
     z-index: 2;
+    @media screen and (max-width: 1600px) {
+      right: -206px;
+    }
+    @media screen and (max-width: $mobile-bp) {
+      display: none;
+    }
   }
   .container--contest-block5 {
-    max-width: 960px;
+    max-width: 1180px;
   }
   .h2-contest--contest-block5 {
     margin-bottom: 92px;
@@ -319,8 +438,8 @@ body {
     flex-grow: 1;
   }
   .contest-block5-item-text-block {
-    max-width: 486px;
-    flex-basis: 486px;
+    max-width: 530px;
+    flex-basis: 530px;
     position: relative;
     z-index: 2;
     @media screen and (max-width: $mobile-bp) {
@@ -335,7 +454,7 @@ body {
     text-align: right;
   }
   .contest-block5-item-title-accent {
-    display: table;
+    display: inline-block;
     font-size: 24px;
     color: #fff;
     font-weight: bold;
@@ -343,6 +462,12 @@ body {
     padding: 6px 10px 3px 10px;
     text-transform: uppercase;
     margin-bottom: 8px;
+  }
+  .contest-block5-item-inner {
+    margin-bottom: 50px;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
   .contest-block5-item-title {
     font-size: 24px;
@@ -360,6 +485,28 @@ body {
       font-size: 20px;
     }
   }
+  .contest-block5-item-list {
+    font-size: 16px;
+    list-style: none;
+    padding: 0;
+    @media screen and (max-width: $mobile-bp) {
+      font-size: 20px;
+    }
+    li {
+      position: relative;
+      padding-left: 25px;
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 5px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: $accent;
+      }
+    }
+  }
   .contest-block5-item-img {
     display: block;
     position: absolute;
@@ -370,9 +517,9 @@ body {
   }
   .contest-block5-item-img--2 {
     left: 2px;
-    top: -312px;
+    top: 0;
     @media screen and (max-width: $mobile-bp) {
-      top: -242px;
+      top: 0;
     }
   }
   .contest-block5-item-img--3 {
@@ -409,15 +556,32 @@ body {
   .contest-block6 {
     position: relative;
     padding: 60px 0 60px 0;
+    background-color: #edecf1;
   }
   .container--contest-block6 {
     max-width: 800px;
   }
   .contest-block6-decorate-img--1 {
     right: -230px;
-    top: -120px;
+    top: -260px;
     @media screen and (max-width: $mobile-bp) {
       right: -280px;
+    }
+  }
+  .h2-contest--block6 {
+    margin-bottom: 30px;
+  }
+  .contest-block6-item-text {
+    text-align: center;
+    font-weight: normal;
+    font-size: 16px;
+    color: #2b2b2b;
+    margin-bottom: 20px;
+  }
+  .contest-block6-link {
+    color: $second;
+    &:hover {
+      text-decoration: none;
     }
   }
   .contes-spoiler-text {
@@ -462,7 +626,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-image: url('../images/dest/contest/bg4_1.png');
+    background-image: url("../images/dest/contest/bg4_1.png");
   }
   .h2-contest--contest-block7 {
     margin-bottom: 20px;
@@ -529,7 +693,7 @@ body {
     cursor: pointer;
     line-height: 0;
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       left: 4px;
       top: 1px;

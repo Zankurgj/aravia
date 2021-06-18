@@ -1,5 +1,7 @@
 // @import 'node_modules/swiper/swiper.scss';
-@import 'node_modules/slick-carousel/slick/slick.scss';
+@import "node_modules/slick-carousel/slick/slick.scss";
+@import "node_modules/beerslider/dist/BeerSlider";
+
 @function max($numbers...) {
   @return m#{a}x(#{$numbers});
 }
@@ -8,7 +10,7 @@
   @return m#{i}n(#{$numbers});
 }
 
-@import 'node_modules/@fancyapps/fancybox/dist/jquery.fancybox';
+@import "node_modules/@fancyapps/fancybox/dist/jquery.fancybox";
 
 // FONTS LOAD SECTION
 @mixin font($f-name, $f-style, $f-weight, $f-url) {
@@ -16,15 +18,15 @@
     font-family: $f-name;
     font-style: $f-style;
     font-weight: $f-weight;
-    src: url($f-url + '.woff2') format('woff2');
-    src: url($f-url + '.woff') format('woff');
+    src: url($f-url + ".woff2") format("woff2");
+    src: url($f-url + ".woff") format("woff");
   }
 }
-@include font('Circe', light, 300, '../fonts/Circe-Light');
-@include font('Circe', normal, 400, '../fonts/Circe-Regular');
-@include font('Circe', bold, 700, '../fonts/Circe-Bold');
-@include font('Circe', black, 900, '../fonts/Circe-ExtraBold');
-@include font('ruble', normal, 400, '../fonts/rubl');
+@include font("Circe", light, 300, "../fonts/Circe-Light");
+@include font("Circe", normal, 400, "../fonts/Circe-Regular");
+@include font("Circe", bold, 700, "../fonts/Circe-Bold");
+@include font("Circe", black, 900, "../fonts/Circe-ExtraBold");
+@include font("ruble", normal, 400, "../fonts/rubl");
 
 $circe: Circe, sans-serif;
 $mainfamily: $circe;

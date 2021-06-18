@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "@fancyapps/fancybox": "^3.5.7",
+    "beerslider": "^1.0.3",
     "imagesloaded": "^4.1.4",
     "jquery.maskedinput": "^1.4.1",
     "masonry-layout": "^4.2.2",
