@@ -247,11 +247,6 @@ body {
     padding: 0 85px;
   }
   .contest-work-slide {
-    display: flex;
-  }
-  .contest-work-slide-col {
-    max-width: 50%;
-    flex-basis: 50%;
     padding: 0 5px;
   }
   .contest-compare-slider {
@@ -289,11 +284,11 @@ body {
     background-size: contain;
   }
   .contest-work-slider-arrow--prev {
-    left: 0;
+    left: 10px;
     background-image: url("../images/dest/contest/left-arrow.png");
   }
   .contest-work-slider-arrow--next {
-    right: 0;
+    right: 10px;
     background-image: url("../images/dest/contest/right-arrow.png");
   }
   .contest-block3 {
@@ -438,8 +433,8 @@ body {
     flex-grow: 1;
   }
   .contest-block5-item-text-block {
-    max-width: 530px;
-    flex-basis: 530px;
+    max-width: 550px;
+    flex-basis: 550px;
     position: relative;
     z-index: 2;
     @media screen and (max-width: $mobile-bp) {
@@ -555,10 +550,12 @@ body {
 
   .contest-block6 {
     position: relative;
-    padding: 60px 0 60px 0;
+    padding: 0 0 60px 0;
     background-color: #edecf1;
   }
-  .container--contest-block6 {
+  .container-contest--block6 {
+    position: relative;
+    z-index: 2;
     max-width: 800px;
   }
   .contest-block6-decorate-img--1 {
