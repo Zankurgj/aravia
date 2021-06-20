@@ -28,6 +28,7 @@
     "beerslider": "^1.0.3",
     "imagesloaded": "^4.1.4",
     "jquery.maskedinput": "^1.4.1",
+    "juxtaposejs": "^1.1.6",
     "masonry-layout": "^4.2.2",
     "slick-carousel": "^1.8.1",
     "swiper": "^6.1.2"
