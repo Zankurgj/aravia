@@ -249,21 +249,6 @@
 </body>
 <script src="js/app.min.js"></script>
 <script>
-  function toggleSpoiler(el) {
-    $(el).siblings('.js--contes-spoiler').slideToggle(200);
-  }
-  $('#achorLink').click(function (e) {
-    e.preventDefault();
-    var targetId = $(this).attr("href");
-    var top = $(targetId).offset().top;
-    $('html, body').stop().animate({ scrollTop: top }, 500);
-  });
-  $.fn.BeerSlider = function (options) {
-    options = options || {};
-    return this.each(function () {
-      new BeerSlider(this, options);
-    });
-  };
   $('.js--contest-work-slider').slick({
     slidesToShow: 2,
     slidesToScroll: 2,
