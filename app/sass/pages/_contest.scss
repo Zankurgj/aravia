@@ -268,14 +268,9 @@ body {
   .contest-block2-inner {
     position: relative;
     z-index: 2;
-    text-align: right;
+    text-align: center;
     padding: 90px 0 0 0;
-    max-width: 520px;
-    margin-bottom: 90px;
-    @media screen and (max-width: $mobile-bp) {
-      text-align: left;
-      max-width: 420px;
-    }
+    margin-bottom: 190px;
   }
   .btn--contest-block2 {
     position: absolute;
